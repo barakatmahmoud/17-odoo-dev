@@ -1,0 +1,12 @@
+*** GIT Commands ***
+
+
+git config --global user.name "MahmoudBarakat"
+
+git restore File_name (to rollback my changes on local device)
+
+git restore --staged File_name (to rollback my changes on staged area)
+
+git revert hashcodeofcommit (to revert commit)
+
+
