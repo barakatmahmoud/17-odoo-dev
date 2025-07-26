@@ -227,7 +227,3 @@ print(y.issubset(x))
 
 ### isdisjoint() ###
 print(x.isdisjoint(y))
-
-
-##########
-#########revert
