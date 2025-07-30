@@ -163,67 +163,67 @@
 #
 ###
 
-s1 = {"Ahmed", "Ali", 3,(1,2,3)} #only accept immutable data like (string, number, tuple)
-### clear() ###
-s1.clear()
-print(s1)
-
-### union() ###
-s2 = {"Sara", "Mohamed", 4, 5}
-s3 = {"Karem", "Marwan", 6,(7,8,9)}
-print(s2.union(s3))
-print(s2 | s3)
-
-### add() ### only add one item
-s2.add("Osama")
-print(s2)
-
-### copy() ### sallow copy
-s4 = s2.copy()
-print(s4)
-
-### remove() ###
-s4.remove("Sara")
-print(s4)
-
-### discard() ###
-s4.discard(4)
-print(s4)
-
-### pop() ###
-print(s4.pop())
-
-### difference() ###
-a = {1,2,3, "x", "y"}
-b = {3,4,5 , "y", "z"}
-print(a.difference(b))
-
-### difference_update() ###
-a.difference_update(b)
-print(a)
-
-## intersection() ###
-print(a.intersection(b))
-
-## intersection_update() ###
-a.intersection_update(b)
-print(a)
-
-## symmetric_difference()
-print(a.symmetric_difference(b))
-
-
-## symmetric_difference_update()
-a.symmetric_difference_update(b)
-print(a)
-
-### issuperset() ###
-x = {1,2,3,4}
-y = {1,2,3}
-print(x.issuperset(y))
-
-### issubset() ###
-print(y.issubset(x))
-
-### isdisjoint() ###
-print(x.isdisjoint(y))
+# s1 = {"Ahmed", "Ali", 3,(1,2,3)} #only accept immutable data like (string, number, tuple)
+# ### clear() ###
+# s1.clear()
+# print(s1)
+#
+# ### union() ###
+# s2 = {"Sara", "Mohamed", 4, 5}
+# s3 = {"Karem", "Marwan", 6,(7,8,9)}
+# print(s2.union(s3))
+# print(s2 | s3)
+#
+# ### add() ### only add one item
+# s2.add("Osama")
+# print(s2)
+#
+# ### copy() ### sallow copy
+# s4 = s2.copy()
+# print(s4)
+#
+# ### remove() ###
+# s4.remove("Sara")
+# print(s4)
+#
+# ### discard() ###
+# s4.discard(4)
+# print(s4)
+#
+# ### pop() ###
+# print(s4.pop())
+#
+# ### difference() ###
+# a = {1,2,3, "x", "y"}
+# b = {3,4,5 , "y", "z"}
+# print(a.difference(b))
+#
+# ### difference_update() ###
+# a.difference_update(b)
+# print(a)
+#
+# ## intersection() ###
+# print(a.intersection(b))
+#
+# ## intersection_update() ###
+# a.intersection_update(b)
+# print(a)
+#
+# ## symmetric_difference()
+# print(a.symmetric_difference(b))
+#
+#
+# ## symmetric_difference_update()
+# a.symmetric_difference_update(b)
+# print(a)
+#
+# ### issuperset() ###
+# x = {1,2,3,4}
+# y = {1,2,3}
+# print(x.issuperset(y))
+#
+# ### issubset() ###
+# print(y.issubset(x))
+#
+# ### isdisjoint() ###
+# print(x.isdisjoint(y))
