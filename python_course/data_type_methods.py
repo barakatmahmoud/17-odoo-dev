@@ -227,3 +227,86 @@
 #
 # ### isdisjoint() ###
 # print(x.isdisjoint(y))
+
+
+###
+#
+#
+# Dictionary Methods
+#
+#
+###
+
+# employee = {
+#     'name': 'Ahmed',
+#     'age': 30,
+#     'position': "SoftwareEngineer"
+# }
+
+### clear() ###
+# employee.clear()
+# print(employee)
+
+### update() ###
+# employee.update({'end_date':2025})
+# print(employee)
+# employee['location'] = "Cairo"
+# print(employee)
+
+### copy() ###
+# employee2= employee.copy()
+# print(employee2)
+
+### setdefault() ###
+# employee.setdefault("birthdate", 1992)
+# print(employee)
+
+### popitem() ###
+# print(employee.popitem())
+
+### items() ###
+# print(employee.items())
+
+### fromkeys()
+# employee3 = ('name', 'age', 'location')
+# b = "Ali"
+# print(dict.fromkeys(employee3, b))
+
+
+###
+#
+#
+# Type Conversion
+#
+#
+###
+
+### ***Convert string to list, tuple, set ###
+# name = "Mahmoud Ali Abdo Barakat"
+# print(list(name))
+# print(tuple(name))
+# print(set(name))
+
+### ***Convert tuple to list, set ###
+# t = {'1','2','3','4','5'}
+# print(list(t))
+# print(set(t))
+
+### ***Convert list to set, tuple ###
+# l = [1,2,3,4,5]
+# print(tuple(l))
+# print(set(l))
+
+### ***Convert set to list , tuple ###
+# s = (1,2,3,4,5)
+# print(list(s))
+# print(tuple(s))
+
+### ***Convert dictionary to list, set, tuple ###
+# d = {
+#     "one" : 1,
+#     "two" : 2
+# }
+# print(list(d))
+# print(set(d))
+# print(tuple(d))
