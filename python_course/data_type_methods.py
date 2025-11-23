@@ -310,3 +310,9 @@
 # print(list(d))
 # print(set(d))
 # print(tuple(d))
+
+
+### ***User Input() ###
+# name = input("Please Enter Your Name: ")
+# age = input("Please Enter Your Age: ")
+# print(f"Hello {name} Your age is {age}")
