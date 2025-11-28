@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="property_tree_view" model="ir.ui.view">
+          <field name="name">property.tree.view</field>
+          <field name="model">property</field>
+          <field name="arch" type="xml">
+              <tree>
+                  <field name="name"/>
+                  <field name="date_availability"/>
+                  <field name="selling_price"/>
+                  <field name="garden"/>
+              </tree>
+          </field>
+    </record>
+
+     <record id="property_form_view" model="ir.ui.view">
+          <field name="name">property.form.view</field>
+          <field name="model">property</field>
+          <field name="arch" type="xml">
+              <form>
+                  <sheet>
+                      <div class="oe_title">
+                          <label for="name"/>
+                          <h1>
+                              <field name="name"/>
+                          </h1>
+                      </div>
+                      <group>
+                          <group string="Basic Info">
+                              <field name="name"/>
+                              <field name="description"/>
+                              <field name="post_code"/>
+                              <field name="date_availability"/>
+                              <field name="expected_price"/>
+                              <field name="selling_price"/>
+                              <field name="bedrooms"/>
+                          </group>
+                          <group string="Additional Info">
+                              <field name="living_area"/>
+                              <field name="facades"/>
+                              <field name="garage"/>
+                              <field name="garden"/>
+                              <field name="garden_area"/>
+                              <field name="garden_orientation"/>
+                          </group>
+                      </group>
+                  </sheet>
+              </form>
+          </field>
+    </record>
+
+    <record id="propert_action" model="ir.actions.act_window">
+        <field name="name">Property</field>
+        <field name="res_model">property</field>
+     </record>
+
+    <menuitem
+        id="property_menu_item"
+        name="Properties"
+        parent="properties_menu"
+        action="propert_action"/>
+</odoo>
