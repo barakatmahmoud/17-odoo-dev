@@ -9,6 +9,8 @@
 
         'views/base_menus.xml',
         'views/property_views.xml',
+        'views/owner_views.xml',
+        'views/tag_views.xml',
     ],
     'application': True,
 }

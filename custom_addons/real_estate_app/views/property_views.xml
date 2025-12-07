@@ -40,6 +40,16 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <header>
+<!--                        ADD Button-->
+                        <button string="Set Draft" name="draft_action" type="object" class="btn-primary"
+                        invisible="state != 'pending'"/>
+                        <button string="Set Pending" name="pending_action" type="object" class="btn-primary"
+                        invisible="state != 'draft'"/>
+                        <button string="Set Sold" name="sold_action" type="object" class="btn-primary"
+                        invisible="state != 'pending'"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
                     <div class="oe_title">
                         <label for="name"/>
                         <h1>
@@ -50,18 +60,20 @@
                         <group string="Basic Info">
                             <field name="description"/>
                             <field name="post_code"/>
-                            <field name="date_availability"/>
+                            <field name="date_availability" widget="date"/>
                             <field name="expected_price"/>
                             <field name="selling_price"/>
                             <field name="bedrooms"/>
                         </group>
                         <group string="Additional Info">
+                            <field name="owner_id" options="{'no_create': True}"/>
                             <field name="living_area"/>
                             <field name="facades"/>
                             <field name="garage"/>
                             <field name="garden"/>
                             <field name="garden_area"/>
                             <field name="garden_orientation"/>
+                            <field name="tag_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </sheet>
