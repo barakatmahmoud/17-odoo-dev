@@ -63,10 +63,12 @@
                             <field name="date_availability" widget="date"/>
                             <field name="expected_price"/>
                             <field name="selling_price"/>
+                            <field name="diff"/>
                             <field name="bedrooms"/>
                         </group>
                         <group string="Additional Info">
                             <field name="owner_id" options="{'no_create': True}"/>
+                            <field name="owner_phone"/>
                             <field name="living_area"/>
                             <field name="facades"/>
                             <field name="garage"/>

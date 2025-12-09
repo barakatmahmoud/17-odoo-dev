@@ -10,6 +10,8 @@ class Property(models.Model):
     date_availability = fields.Date()
     expected_price = fields.Float()
     selling_price = fields.Float()
+    ### Compute Field ###
+    diff = fields.Float(compute='_compute_diff', store=True)
     bedrooms = fields.Integer(required=True)
     living_area = fields.Integer()
     facades = fields.Integer()
@@ -32,6 +34,8 @@ class Property(models.Model):
         ('pending', 'Pending'),
         ('sold', 'Sold'),
     ], default='draft')
+    ### Related Field ###
+    owner_phone = fields.Char(related='owner_id.phone')
 
     ### ADD SQL Constraints ###
     _sql_constraints = [
@@ -69,4 +73,23 @@ class Property(models.Model):
         if self.filtered(lambda rec: rec.state == 'sold'):
             raise UserError("Cannot delete records in Sold state.")
         return super().unlink()
+
+    ### Compute Method ###
+    @api.depends('expected_price', 'selling_price')
+    def _compute_diff(self):
+        for rec in self:
+            rec.diff = rec.expected_price - rec.selling_price
+
+    ### onchange Method ###
+    @api.onchange('expected_price')
+    def _onchange_expected_price(self):
+        for rec in self:
+            print("REC", rec)
+            print('INSIDE ONCHANGE')
+            return {
+                'warning': {
+                    'title': "Warning",
+                    'message': "Negative Value",
+                }
+            }
 
