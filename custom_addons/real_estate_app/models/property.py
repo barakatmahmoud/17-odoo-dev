@@ -10,6 +10,8 @@ class Property(models.Model):
     description = fields.Text()
     post_code = fields.Char(required=True, tracking=True)
     date_availability = fields.Date()
+    date_expected = fields.Date()
+    is_late = fields.Boolean(default=False)
     expected_price = fields.Float()
     selling_price = fields.Float()
     ### Compute Field ###
@@ -103,6 +105,13 @@ class Property(models.Model):
                     'message': "Negative Value",
                 }
             }
+
+    ### ADD Function Of Cron Job ###
+    def check_expected_selling_date(self):
+        property_ids = self.search([])
+        for rec in property_ids:
+            if rec.date_expected and rec.date_expected < fields.date.today():
+                rec.is_late = True
 
 ### ADD Lines in Model ###
 class PropertyLine(models.Model):
