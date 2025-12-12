@@ -3,10 +3,12 @@ from odoo.exceptions import ValidationError, UserError
 
 class Property(models.Model):
     _name = 'property'
+    ### ADD Chatter ###
+    _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char(default='New')
     description = fields.Text()
-    post_code = fields.Char(required=True)
+    post_code = fields.Char(required=True, tracking=True)
     date_availability = fields.Date()
     expected_price = fields.Float()
     selling_price = fields.Float()
@@ -33,9 +35,12 @@ class Property(models.Model):
         ('draft', 'Draft'),
         ('pending', 'Pending'),
         ('sold', 'Sold'),
-    ], default='draft')
+        ('closed', 'Closed'),
+    ], default='draft',tracking=True)
     ### Related Field ###
     owner_phone = fields.Char(related='owner_id.phone')
+    ### ADD One2many Line ###
+    property_line_ids = fields.One2many('property.line', 'property_id')
 
     ### ADD SQL Constraints ###
     _sql_constraints = [
@@ -61,11 +66,17 @@ class Property(models.Model):
     def sold_action(self):
         for rec in self:
             rec.state = 'sold'
+            ### USE message_post to send Message in Chatter ###
+            rec.message_post(body="The Property has been Sold")
+
+    def closed_action(self):
+        for rec in self:
+            rec.state = 'closed'
 
     def write(self, vals):
         ### Block Edit in Specific State
-        if self.filtered(lambda rec: rec.state == 'sold'):
-            raise UserError("Cannot modify records in sold state.")
+        if self.filtered(lambda rec: rec.state == 'closed'):
+            raise UserError("Cannot modify records in Close state.")
         return super().write(vals)
 
     def unlink(self):
@@ -93,3 +104,10 @@ class Property(models.Model):
                 }
             }
 
+### ADD Lines in Model ###
+class PropertyLine(models.Model):
+    _name = 'property.line'
+
+    property_id = fields.Many2one('property', ondelete='cascade')
+    area = fields.Float()
+    description = fields.Char()

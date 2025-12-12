@@ -4,3 +4,4 @@ class Tag(models.Model):
     _name = 'tag'
 
     name = fields.Char(required=True)
+    active = fields.Boolean(default=True)
