@@ -113,6 +113,21 @@ class Property(models.Model):
             if rec.date_expected and rec.date_expected < fields.date.today():
                 rec.is_late = True
 
+    ### Env Object ###
+    def print_env_details(self):
+        ### Print login user
+        print(self.env.user)
+        ### Print login user ID
+        print(self.env.uid)
+        ### print user company
+        print(self.env.company)
+        ### print env context
+        print(self.env.context)
+        ### Access any model
+        partners = self.env['res.partner'].search([])
+        print(partners)
+
+
 ### ADD Lines in Model ###
 class PropertyLine(models.Model):
     _name = 'property.line'
