@@ -7,6 +7,8 @@ class Property(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char(default='New')
+    ### ADD Sequence field ###
+    ref = fields.Char(readonly=True, copy = False, default = lambda self: self.env['ir.sequence'].next_by_code('property_seq'))
     description = fields.Text()
     post_code = fields.Char(required=True, tracking=True)
     date_availability = fields.Date()
@@ -83,8 +85,10 @@ class Property(models.Model):
 
     def unlink(self):
         ### Block Delete in Specific State
-        if self.filtered(lambda rec: rec.state == 'sold'):
-            raise UserError("Cannot delete records in Sold state.")
+        sold_property = self.filtered(lambda rec: rec.state == 'sold')
+        if sold_property:
+            for rec in sold_property:
+                raise UserError(f"Cannot delete records in Sold state.{rec.name}")
         return super().unlink()
 
     ### Compute Method ###
@@ -94,17 +98,17 @@ class Property(models.Model):
             rec.diff = rec.expected_price - rec.selling_price
 
     ### onchange Method ###
-    @api.onchange('expected_price')
-    def _onchange_expected_price(self):
-        for rec in self:
-            print("REC", rec)
-            print('INSIDE ONCHANGE')
-            return {
-                'warning': {
-                    'title': "Warning",
-                    'message': "Negative Value",
-                }
-            }
+    # @api.onchange('expected_price')
+    # def _onchange_expected_price(self):
+    #     for rec in self:
+    #         print("REC", rec)
+    #         print('INSIDE ONCHANGE')
+    #         return {
+    #             'warning': {
+    #                 'title': "Warning",
+    #                 'message': "Negative Value",
+    #             }
+    #         }
 
     ### ADD Function Of Cron Job ###
     def check_expected_selling_date(self):
@@ -126,6 +130,13 @@ class Property(models.Model):
         ### Access any model
         partners = self.env['res.partner'].search([])
         print(partners)
+
+    # def create(self, vals):
+    #     res = super(Property, self).create(vals)
+    #     ### ADD Sequence ###
+    #     if res.ref == 'New':
+    #         res.ref = self.env['ir.sequence'].next_by_code('property_seq')
+    #     return res
 
 
 ### ADD Lines in Model ###

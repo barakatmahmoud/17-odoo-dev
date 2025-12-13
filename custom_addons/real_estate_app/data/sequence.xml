@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+<!--        ADD Record In Sequence Table-->
+        <record id="property_seq" model="ir.sequence">
+        <field name="name">Property Seq</field>
+        <field name="code">property_seq</field>
+        <field name="prefix">PRO</field>
+<!--            ADD Prefix by year and month-->
+<!--       <field name="prefix">INV/%(year)s/%(month)s/</field>-->
+      <field name="padding">5</field>
+    </record>
+    </data>
+</odoo>
