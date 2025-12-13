@@ -14,6 +14,7 @@
         'views/owner_views.xml',
         'views/tag_views.xml',
         'views/res_partner_views.xml',
+        'views/property_history.xml',
     ],
     'application': True,
 }

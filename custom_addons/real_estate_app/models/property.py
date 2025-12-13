@@ -61,20 +61,24 @@ class Property(models.Model):
     ### ADD Button Action ###
     def draft_action(self):
         for rec in self:
+            rec.create_property_history(rec.state, 'draft')
             rec.state = 'draft'
 
     def pending_action(self):
         for rec in self:
+            rec.create_property_history(rec.state, 'pending')
             rec.state = 'pending'
 
     def sold_action(self):
         for rec in self:
+            rec.create_property_history(rec.state, 'sold')
             rec.state = 'sold'
             ### USE message_post to send Message in Chatter ###
             rec.message_post(body="The Property has been Sold")
 
     def closed_action(self):
         for rec in self:
+            rec.create_property_history(rec.state, 'closed')
             rec.state = 'closed'
 
     def write(self, vals):
@@ -138,6 +142,15 @@ class Property(models.Model):
     #         res.ref = self.env['ir.sequence'].next_by_code('property_seq')
     #     return res
 
+    ### ADD Function to create record in another model when state change
+    def create_property_history(self, old_state, new_state):
+        for rec in self:
+            rec.env['property.history'].sudo().create({
+                'user_id': rec.env.uid,
+                'property_id': rec.id,
+                'old_state': old_state,
+                'new_state': new_state,
+            })
 
 ### ADD Lines in Model ###
 class PropertyLine(models.Model):
