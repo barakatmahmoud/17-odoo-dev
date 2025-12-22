@@ -81,11 +81,12 @@ class Property(models.Model):
             rec.create_property_history(rec.state, 'closed')
             rec.state = 'closed'
 
-    def write(self, vals):
-        ### Block Edit in Specific State
-        if self.filtered(lambda rec: rec.state == 'closed'):
-            raise UserError("Cannot modify records in Close state.")
-        return super().write(vals)
+    ### Overwrite write method and add logic Block edit when state == 'closed'
+    # def write(self, vals):
+    #     ### Block Edit in Specific State
+    #     if self.filtered(lambda rec: rec.state == 'closed'):
+    #         raise UserError("Cannot modify records in Close state.")
+    #     return super().write(vals)
 
     def unlink(self):
         ### Block Delete in Specific State
@@ -143,14 +144,20 @@ class Property(models.Model):
     #     return res
 
     ### ADD Function to create record in another model when state change
-    def create_property_history(self, old_state, new_state):
+    def create_property_history(self, old_state, new_state, reason="Default Value"):
         for rec in self:
             rec.env['property.history'].sudo().create({
                 'user_id': rec.env.uid,
                 'property_id': rec.id,
                 'old_state': old_state,
                 'new_state': new_state,
+                'reason': reason or False,
             })
+
+    def action_open_change_state_wizard(self):
+        action = self.env['ir.actions.actions']._for_xml_id('real_estate_app.change_state_wizard_action')
+        action['context'] = {'default_property_id': self.id}
+        return action
 
 ### ADD Lines in Model ###
 class PropertyLine(models.Model):

@@ -8,7 +8,9 @@
         'security/ir.model.access.csv',
 
         'data/sequence.xml',
-        
+
+        'wizard/change_state_views.xml',
+
         'views/base_menus.xml',
         'views/property_views.xml',
         'views/owner_views.xml',
