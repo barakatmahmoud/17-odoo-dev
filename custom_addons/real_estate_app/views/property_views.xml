@@ -66,6 +66,8 @@
                     </div>
                     <group>
                         <group string="Basic Info">
+                            <field name="create_time" readonly="1" required="1"/>
+                            <field name="next_time" readonly="1" required="1"/>
                             <field name="description"/>
                             <field name="post_code"/>
                             <field name="date_availability" widget="date"/>

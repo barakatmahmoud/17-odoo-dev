@@ -1,3 +1,4 @@
+from datetime import timedelta
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError, UserError
 
@@ -45,6 +46,10 @@ class Property(models.Model):
     owner_phone = fields.Char(related='owner_id.phone')
     ### ADD One2many Line ###
     property_line_ids = fields.One2many('property.line', 'property_id')
+    ### Create a field to get the creation time
+    create_time = fields.Datetime(default=fields.Datetime.now())
+    ### Field Time Compute
+    next_time = fields.Datetime(compute='_compute_next_time')
 
     ### ADD SQL Constraints ###
     _sql_constraints = [
@@ -57,6 +62,15 @@ class Property(models.Model):
         for rec in self:
             if rec.bedrooms <=0:
                 raise ValidationError("Please, Enter Valid Number Of Bedrooms")
+
+    ### Calculate create time + 6 hours , use timedelta
+    @api.depends('create_time')
+    def _compute_next_time(self):
+        for rec in self:
+            if rec.create_time:
+                rec.next_time = rec.create_time + timedelta(hours=6)
+            else:
+                rec.next_time = False
 
     ### ADD Button Action ###
     def draft_action(self):
@@ -152,10 +166,15 @@ class Property(models.Model):
                 'old_state': old_state,
                 'new_state': new_state,
                 'reason': reason or False,
+                ### use Command tuples to create in one2many field
+                'property_history_line_ids': [(0,0, {'description': line.description, 'area':line.area})for line in rec.property_line_ids]
             })
 
+    ### Open Wizard through Server Action###
     def action_open_change_state_wizard(self):
+        #Get Wizard Action
         action = self.env['ir.actions.actions']._for_xml_id('real_estate_app.change_state_wizard_action')
+        #Add Context to Wizard action
         action['context'] = {'default_property_id': self.id}
         return action
 
