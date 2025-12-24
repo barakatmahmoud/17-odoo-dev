@@ -3,7 +3,7 @@
     'name': 'Real Estate',
     'version' : '17.1',
     'summary': 'Custom App Real Estate For Learning',
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail','web'],
     'data': [
         'security/ir.model.access.csv',
 

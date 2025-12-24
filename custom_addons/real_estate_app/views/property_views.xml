@@ -41,7 +41,14 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+<!--                    ADD Smart btn to Open Specific View-->
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_open_related_owner" string="Owner"
+                        type="object" icon="fa-user" invisible="not owner_id"/>
+                    </div>
                     <header>
+<!--                        ADD web_ribbon-->
+                        <widget name="web_ribbon" title="Sold" bg_color="text-bg-success" invisible="state != 'sold'"/>
 <!--                        ADD Button-->
 <!--                        env obj -->
                         <button string="Test BTN" name="print_env_details" type="object" class="btn-primary"

@@ -149,6 +149,10 @@ class Property(models.Model):
         ### Access any model
         partners = self.env['res.partner'].search([])
         print(partners)
+        ### Print Lang
+        print(self.env.context.get('lang'))
+        ### If User Has Specific group
+        # self.env.user.has_group('your_module.group_hr_manager')
 
     # def create(self, vals):
     #     res = super(Property, self).create(vals)
@@ -176,6 +180,15 @@ class Property(models.Model):
         action = self.env['ir.actions.actions']._for_xml_id('real_estate_app.change_state_wizard_action')
         #Add Context to Wizard action
         action['context'] = {'default_property_id': self.id}
+        return action
+
+    ### Action to smart btn To open Specific View
+    def action_open_related_owner(self):
+        action =  self.env['ir.actions.actions']._for_xml_id('real_estate_app.owner_action')
+        print("Action>>>>", action)
+        view_id = self.env.ref('real_estate_app.owner_form_view').id
+        action['res_id'] = self.owner_id.id
+        action['views'] = [[view_id, 'form']]
         return action
 
 ### ADD Lines in Model ###
