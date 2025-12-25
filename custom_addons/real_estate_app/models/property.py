@@ -7,7 +7,7 @@ class Property(models.Model):
     ### ADD Chatter ###
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
-    name = fields.Char(default='New')
+    name = fields.Char()
     ### ADD Sequence field ###
     ref = fields.Char(readonly=True, copy = False, default = lambda self: self.env['ir.sequence'].next_by_code('property_seq'))
     description = fields.Text()
@@ -86,9 +86,23 @@ class Property(models.Model):
     def sold_action(self):
         for rec in self:
             rec.create_property_history(rec.state, 'sold')
-            rec.state = 'sold'
+            self.write({'state': 'sold'})
             ### USE message_post to send Message in Chatter ###
             rec.message_post(body="The Property has been Sold")
+            # Show Notification After Sell Property
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': 'Success',
+                    'message': 'Property sold',
+                    'type': 'success',
+                    'next': {
+                        'type': 'ir.actions.client',
+                        'tag': 'reload',
+                    }
+                }
+            }
 
     def closed_action(self):
         for rec in self:
@@ -191,13 +205,26 @@ class Property(models.Model):
         action['views'] = [[view_id, 'form']]
         return action
 
-    ### ADD Method to Open URL Internal in odoo
+    ### ADD Method to Open URL Internal in odoo(URL action)
     def action_open_partners(self):
         return {
             'type': 'ir.actions.act_url',
             'url': '/odoo/contacts?view_type=list',
             'target': 'self'
         }
+
+    ### ADD Method to Show Notification(client action)
+    def action_hello_client(self):
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'display_notification',
+            'params': {
+                'title': 'Hello 👋',
+                'message': 'This is my first Client Action in Odoo 17',
+                'type': 'success',
+            }
+        }
+
 
 ### ADD Lines in Model ###
 class PropertyLine(models.Model):

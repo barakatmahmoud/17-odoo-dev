@@ -49,7 +49,6 @@
                     <header>
 <!--                        ADD web_ribbon-->
                         <widget name="web_ribbon" title="Sold" bg_color="text-bg-success" invisible="state != 'sold'"/>
-<!--                        ADD Button-->
 <!--                        env obj -->
                         <button string="Test BTN" name="print_env_details" type="object" class="btn-primary"/>
 <!--                        ADD Btn TO Open External URL Action-->
@@ -61,6 +60,11 @@
                             icon="fa-users">
                             <span>Partners</span>
                         </button>
+<!--                        ADD Btn to Client action to Show Notification-->
+                        <button name="action_hello_client"
+                            type="object"
+                            string="Say Hello"
+                            class="btn-primary"/>
                         <button string="Set Draft" name="draft_action" type="object" class="btn-primary"
                         invisible="state != 'pending'"/>
                         <button string="Set Pending" name="pending_action" type="object" class="btn-primary"
@@ -99,7 +103,7 @@
                             <field name="living_area"/>
                             <field name="facades"/>
                             <field name="garage"/>
-                            <field name="garden"/>
+                            <field name="garden"  widget="boolean_toggle"/>
                             <field name="garden_area"/>
                             <field name="garden_orientation"/>
                             <field name="tag_ids" widget="many2many_tags"/>
@@ -165,6 +169,8 @@
      <record id="propert_action" model="ir.actions.act_window">
         <field name="name">Property</field>
         <field name="res_model">property</field>
+<!--         ADD Default By Context-->
+         <field name="context">{'default_name': 'Name From Action View'}</field>
     </record>
 
     <menuitem
