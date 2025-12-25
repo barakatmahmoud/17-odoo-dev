@@ -191,6 +191,14 @@ class Property(models.Model):
         action['views'] = [[view_id, 'form']]
         return action
 
+    ### ADD Method to Open URL Internal in odoo
+    def action_open_partners(self):
+        return {
+            'type': 'ir.actions.act_url',
+            'url': '/odoo/contacts?view_type=list',
+            'target': 'self'
+        }
+
 ### ADD Lines in Model ###
 class PropertyLine(models.Model):
     _name = 'property.line'

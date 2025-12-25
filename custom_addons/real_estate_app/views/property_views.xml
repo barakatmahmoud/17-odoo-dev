@@ -51,8 +51,16 @@
                         <widget name="web_ribbon" title="Sold" bg_color="text-bg-success" invisible="state != 'sold'"/>
 <!--                        ADD Button-->
 <!--                        env obj -->
-                        <button string="Test BTN" name="print_env_details" type="object" class="btn-primary"
-                        />
+                        <button string="Test BTN" name="print_env_details" type="object" class="btn-primary"/>
+<!--                        ADD Btn TO Open External URL Action-->
+                        <button type="action" name="%(action_open_google)d" string="Open Google"/>
+<!--                        ADD Btn to Open Internal URL-->
+                        <button type="object"
+                            name="action_open_partners"
+                            class="oe_stat_button"
+                            icon="fa-users">
+                            <span>Partners</span>
+                        </button>
                         <button string="Set Draft" name="draft_action" type="object" class="btn-primary"
                         invisible="state != 'pending'"/>
                         <button string="Set Pending" name="pending_action" type="object" class="btn-primary"
@@ -114,11 +122,6 @@
         </field>
     </record>
 
-    <record id="propert_action" model="ir.actions.act_window">
-        <field name="name">Property</field>
-        <field name="res_model">property</field>
-    </record>
-
 <!--    ADD Server action-->
     <record id="propert_close_server_action" model="ir.actions.server">
         <field name="name">Close</field>
@@ -150,6 +153,18 @@
         <field name="interval_number">1</field>
         <field name="interval_type">days</field>
          <field name="active" eval="True"/>
+    </record>
+
+<!--    ADD URL ACTION-->
+    <record id="action_open_google" model="ir.actions.act_url">
+        <field name="name">Google</field>
+        <field name="url">https://www.google.com</field>
+        <field name="target">new</field>
+    </record>
+
+     <record id="propert_action" model="ir.actions.act_window">
+        <field name="name">Property</field>
+        <field name="res_model">property</field>
     </record>
 
     <menuitem
