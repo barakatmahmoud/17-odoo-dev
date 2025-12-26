@@ -86,23 +86,26 @@ class Property(models.Model):
     def sold_action(self):
         for rec in self:
             rec.create_property_history(rec.state, 'sold')
-            self.write({'state': 'sold'})
-            ### USE message_post to send Message in Chatter ###
-            rec.message_post(body="The Property has been Sold")
-            # Show Notification After Sell Property
-            return {
-                'type': 'ir.actions.client',
-                'tag': 'display_notification',
-                'params': {
-                    'title': 'Success',
-                    'message': 'Property sold',
-                    'type': 'success',
-                    'next': {
-                        'type': 'ir.actions.client',
-                        'tag': 'reload',
-                    }
-                }
-            }
+            rec.write({'state': 'sold'})
+            ### Call Method to send email
+            rec.send_sold_email()
+            # ## USE message_post to send Message in Chatter ###
+            # rec.message_post(body="The Property has been Sold")
+            # # Show Notification After Sell Property
+            # return {
+            #     'type': 'ir.actions.client',
+            #     'tag': 'display_notification',
+            #     'params': {
+            #         'title': 'Success',
+            #         'message': 'Property sold',
+            #         'type': 'success',
+            #         'next': {
+            #             'type': 'ir.actions.client',
+            #             'tag': 'reload',
+            #         }
+            #     }
+            # }
+
 
     def closed_action(self):
         for rec in self:
@@ -224,6 +227,30 @@ class Property(models.Model):
                 'type': 'success',
             }
         }
+
+    ### Method To send mail
+    def send_sold_email(self):
+        template = self.env.ref(
+            'real_estate_app.email_template_property_sold',
+            raise_if_not_found=False
+        )
+        print("TEMPLATE", template)
+        if not template:
+            return
+        for rec in self:
+            # 🟢 جمع كل الإيميلات من partners المرتبطين بالـ owner
+            partners = rec.owner_id.partner_ids.filtered(lambda p: p.email)
+            print("PARTNERS", partners)
+            if not partners:
+                continue
+            emails = ','.join(partners.mapped('email'))
+            print("EMAILS", emails)
+            template.with_context(
+                email_to=emails
+            ).send_mail(
+                rec.id,
+                force_send=False
+            )
 
 
 ### ADD Lines in Model ###

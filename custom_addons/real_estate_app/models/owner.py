@@ -9,6 +9,7 @@ class Owner(models.Model):
     phone = fields.Char()
     property_ids = fields.One2many('property', 'owner_id', string='Property', readonly=True)
     property_count = fields.Integer(compute='_compute_property_count')
+    partner_ids = fields.One2many('res.partner', 'property_owner')
 
     ### Calc Number of Smart Btn
     @api.depends('property_ids')

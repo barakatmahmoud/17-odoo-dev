@@ -8,7 +8,7 @@
         'security/ir.model.access.csv',
 
         'data/sequence.xml',
-
+        'data/mail_template.xml',
         'wizard/change_state_views.xml',
 
         'views/base_menus.xml',
