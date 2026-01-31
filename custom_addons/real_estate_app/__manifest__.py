@@ -11,6 +11,8 @@
         'data/mail_template.xml',
         'wizard/change_state_views.xml',
 
+        'reports/property_report.xml',
+
         'views/base_menus.xml',
         'views/property_views.xml',
         'views/owner_views.xml',
