@@ -51,6 +51,7 @@
                         <widget name="web_ribbon" title="Sold" bg_color="text-bg-success" invisible="state != 'sold'"/>
 <!--                        env obj -->
                         <button string="Test BTN" name="print_env_details" type="object" class="btn-primary"/>
+                        <button string="Test ORM" name="orm_test" type="object" class="btn-primary"/>
 <!--                        ADD Btn TO Open External URL Action-->
                         <button type="action" name="%(action_open_google)d" string="Open Google"/>
 <!--                        ADD Btn to Open Internal URL-->
@@ -106,7 +107,9 @@
                             <field name="garden"  widget="boolean_toggle"/>
                             <field name="garden_area"/>
                             <field name="garden_orientation"/>
-                            <field name="tag_ids" widget="many2many_tags"/>
+<!--                            Two Relation Many2many-->
+                            <field name="feature_tag_ids" widget="many2many_tags"/>
+                            <field name="amenity_tag_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                     <notebook>

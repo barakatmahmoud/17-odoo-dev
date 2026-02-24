@@ -1,6 +1,7 @@
 from datetime import timedelta
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError, UserError
+from odoo.osv import expression
 
 class Property(models.Model):
     _name = 'property'
@@ -34,7 +35,22 @@ class Property(models.Model):
     ### Many2one field ###
     owner_id = fields.Many2one('owner', string='Owner')
     ### Many2many field ###
-    tag_ids = fields.Many2many('tag')
+    feature_tag_ids = fields.Many2many(
+        'tag',
+        'property_feature_tag_rel',  # relation table (مختلف)
+        'property_id',
+        'tag_id',
+        string='Feature Tags'
+    )
+    ### Second Many2many fields ###
+    # العلاقة الثانية
+    amenity_tag_ids = fields.Many2many(
+        'tag',
+        'property_amenity_tag_rel',  # relation table مختلف
+        'property_id',
+        'tag_id',
+        string='Amenity Tags'
+    )
     ### state field to Do Workflow ###
     state = fields.Selection([
         ('draft', 'Draft'),
@@ -251,6 +267,109 @@ class Property(models.Model):
                 rec.id,
                 force_send=False
             )
+
+    def orm_test(self):
+        ### 1-search ###
+        ## Run on domain and return list of records
+        # partners = self.env['res.partner'].sudo().search([('age', '>', 25)])
+        # print('Partners >>>,', partners)
+        # for rec in partners:
+        #     print('Partner Name:', rec.name)
+
+
+        ### 2-search_count ###
+        ## Run on domain and return numbers of records
+        # partners = self.env['res.partner'].sudo().search_count([('age', '>', 25)])
+        # print('Partners >>>,', partners)
+
+
+        ### 3-create ###
+        # self.env['res.partner'].sudo().create({
+        #     'name': 'Mazen Barakat',
+        # })
+
+
+        ### 4-browse ###
+        ## fetch recordset from by id
+        ## Run on id, list of ids, many2oneField, output of search and return recordset , list of record set
+        # partners = self.env['res.partner'].browse(1)
+        # print('Partners >>>,', partners)
+
+
+        ### 5-filtered ###
+        ## Run on recordset and use with lambda
+        # partners = self.env['res.partner'].search([])
+        # persons = partners.filtered(lambda p: p.company_type == 'person')
+        # print("Persons>>>", persons)
+
+        ### 6-filtered_domain ###
+        ## Run on recordset and use with domain
+        # partners = self.env['res.partner'].search([])
+        # f_partners = partners.filtered_domain([('age', '>', 25)])
+        # print('f_partners>>>', f_partners)
+
+        ### 7-mapped ###
+        ## Run on recordset and use with field or function
+        # partners = self.env['res.partner'].search([])
+        # f_partners = partners.mapped('age')
+        # print('f_partners>>>', f_partners)
+
+        ### 8-sorted ###
+        ## Use with field or function and return id sorted
+        # partners = self.env['res.partner'].search([])
+        # f_partners = partners.sorted('write_date')
+        # print('f_partners>>>', f_partners)
+        pass
+
+    ### 9-default_get ###
+    ## Assign default value to field in create operation
+    @api.model
+    def default_get(self, fields):
+        res = super(Property, self).default_get(fields)
+        if 'bedrooms' in fields and res.get('bedrooms', 0) == 0:
+            res['bedrooms'] = 4
+        return res
+
+    ### 10-write ###
+    ## Run when edit
+    def write(self, vals):
+        vals['description'] = self.env.user.name
+        return super(Property, self).write(vals)
+
+    ### 11-copy ###
+    ## run when copy
+    @api.returns('self', lambda x: x.id)
+    def copy(self, default=None):
+        default = dict(default or {})  # ensure default is a dictionary
+        default['name'] = self.name + " Copy"
+        return super(Property, self).copy(default=default)
+
+    ### 12-unlink ###
+    def unlink(self):
+        ### Block Delete in Specific State
+        sold_property = self.filtered(lambda rec: rec.state == 'sold')
+        if sold_property:
+            for rec in sold_property:
+                raise UserError(f"Cannot delete records in Sold state.{rec.name}")
+        return super().unlink()
+
+
+    ### 13-get_view ###
+    ## To edit in xml by use python
+    @api.model
+    def get_view(self, view_id=None, view_type='form', **kwargs):
+        res = super().get_view(view_id, view_type, **kwargs)
+        if view_type == 'form':
+            arch = res.get('arch')
+            if arch:
+                arch = arch.replace(
+                    '<field name="garage"/>',
+                    '<field name="name"/>'
+                )
+                res['arch'] = arch
+        return res
+
+
 
 
 ### ADD Lines in Model ###

@@ -1,5 +1,6 @@
 import apt_inst
 from odoo import models, fields, api
+from odoo.osv import expression
 
 class Owner(models.Model):
     _name = 'owner'
@@ -10,6 +11,7 @@ class Owner(models.Model):
     property_ids = fields.One2many('property', 'owner_id', string='Property', readonly=True)
     property_count = fields.Integer(compute='_compute_property_count')
     partner_ids = fields.One2many('res.partner', 'property_owner')
+
 
     ### Calc Number of Smart Btn
     @api.depends('property_ids')

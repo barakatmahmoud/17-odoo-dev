@@ -5,3 +5,4 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     property_owner = fields.Many2one('owner', string='Property Owner')
+    age = fields.Float(string='Age')
