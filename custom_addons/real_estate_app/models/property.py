@@ -319,6 +319,19 @@ class Property(models.Model):
         # partners = self.env['res.partner'].search([])
         # f_partners = partners.sorted('write_date')
         # print('f_partners>>>', f_partners)
+
+        ### 14-fields_get ###
+        ## This method return fields att based on specific record
+        # current_rec = self.fields_get(([]))
+        # option = current_rec['state']['selection']
+        # print('Option >>',option)
+
+        ### 15-read ###
+        ## This method used to read work on id
+        # record_ids = self.search([])
+        # read_ids = self.read([])
+        # print('read_ids', read_ids)
+
         pass
 
     ### 9-default_get ###

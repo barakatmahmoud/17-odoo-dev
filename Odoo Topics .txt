@@ -39,7 +39,7 @@ Odoo Topics:
 19- Env Object in Odoo.
 
 20- ORM(1-serach 2-search_count 3-create 4-browse 5-filtered 6-filtered_domain 
-7-mapped 8-sorted 9-default_get 10-write 11-copy 12-unlink 13-get_view)
+7-mapped 8-sorted 9-default_get 10-write 11-copy 12-unlink 13-get_view 14-fields_get 15-read)
 
 21- Sequences
 
