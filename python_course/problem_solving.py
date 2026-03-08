@@ -18,3 +18,33 @@
 # numbers = list(set(numbers))   # إزالة التكرار
 # numbers.sort()                 # ترتيب القائمة
 # print(numbers[-2])             # ثاني أكبر عنصر
+
+
+### Nested Lists
+# students = []
+# number_of_student = int(input("Enter Number of Student"))
+# for n in range(number_of_student):
+#     name = input("Enter Name")
+#     grade = float(input("Enter Grade"))
+#     students.append([name, grade])
+# print(students)
+#
+# # استخراج الدرجات فقط
+# grades = [s[1] for s in students]
+# print("Grades",grades)
+#
+# # # ترتيب الدرجات المميزة
+# unique_grades = sorted(set(grades))
+# print('Unique Grades',unique_grades)
+#
+# # # ثاني أقل درجة
+# second_lowest = unique_grades[1]
+# print('Second Lowest',second_lowest)
+#
+# # # أسماء الطلاب الذين لديهم ثاني أقل درجة
+# names = [s[0] for s in students if s[1] == second_lowest]
+#
+# # # ترتيب الأسماء أبجديًا
+# names.sort()
+# for name in names:
+#     print(name)
