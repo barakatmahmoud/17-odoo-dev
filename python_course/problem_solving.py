@@ -48,3 +48,18 @@
 # names.sort()
 # for name in names:
 #     print(name)
+
+
+### Finding the percentage
+# n = int(input("Enter Number Of Students"))
+# student_marks = {}
+# for _ in range(n):
+#     data = input("Enter Data Of Student").split()
+#     name = data[0]
+#     scores = list(map(float, data[1:]))
+#     student_marks[name] = scores
+#
+# query_name = input("Enter Name Of student")
+# marks = student_marks[query_name]
+# average = sum(marks) / len(marks)
+# print(f"{average:.2f}")
