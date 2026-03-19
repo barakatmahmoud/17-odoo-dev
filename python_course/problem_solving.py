@@ -90,3 +90,8 @@
 #     elif command[0] == "reverse":
 #         my_list.reverse()
 
+
+### Tuples
+# t = tuple(map(int, input("Enter Tuple").split()))
+# print(hash(t))
+

@@ -63,6 +63,4 @@ Odoo Topics:
 
 31- self.env.cr.execute() >> Direct interaction with the database
 
-32- APIs
-
-
+32- APIs Integration(1-REST API, 2-External API[XML-RPC, Json-RPC], 3-Webhook integration, 4-third party API integration, 5-odoo to odoo integration)
