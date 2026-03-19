@@ -3,7 +3,7 @@
     'name': 'Real Estate',
     'version' : '17.1',
     'summary': 'Custom App Real Estate For Learning',
-    'depends': ['base', 'mail','web'],
+    'depends': ['base', 'mail', 'website'],
     'data': [
         'security/ir.model.access.csv',
 
@@ -19,6 +19,7 @@
         'views/tag_views.xml',
         'views/res_partner_views.xml',
         'views/property_history.xml',
+        'views/property_info_template.xml',
     ],
     'application': True,
 }

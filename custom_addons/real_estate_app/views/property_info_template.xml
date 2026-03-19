@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="property_info" name="Property List">
+
+        <t t-call="website.layout">
+            <div class="container mt-4">
+                <h2>Properties</h2>
+
+                <div class="row">
+                    <t t-foreach="properties" t-as="p">
+                        <div class="col-md-4 mb-3">
+                            <div class="card p-3">
+
+                                <h4>
+                                    <t t-esc="p.name"/>
+                                </h4>
+
+                                <p>
+                                    <strong>Description:</strong>
+                                    <t t-esc="p.description"/>
+                                </p>
+
+                                <p>
+                                    <strong>Ref:</strong>
+                                    <t t-esc="p.ref"/>
+                                </p>
+
+                                <p>
+                                    <strong>Owner:</strong>
+                                    <t t-esc="p.owner_id.name"/>
+                                </p>
+
+                            </div>
+                        </div>
+                    </t>
+                </div>
+
+            </div>
+        </t>
+
+    </template>
+</odoo>
