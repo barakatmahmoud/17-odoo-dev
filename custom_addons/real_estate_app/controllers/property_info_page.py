@@ -8,3 +8,4 @@ class PropertyInfoPage(http.Controller):
         return request.render('real_estate_app.property_info',{
             'properties': properties,
         })
+

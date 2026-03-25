@@ -1,0 +1,53 @@
+<odoo>
+    <template id="create_property_template">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <h2>Create Property</h2>
+
+                <form action="/property/submit" method="post">
+
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" required="1"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Description</label>
+                        <textarea name="description" class="form-control"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Expected Price</label>
+                        <input type="number" name="price" class="form-control"/>
+                    </div>
+                    <div class="mb-3">
+                        <label>Post Code</label>
+                        <input type="text" name="post_code" class="form-control"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Create
+                    </button>
+
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <template id="property_success_template">
+        <t t-call="website.layout">
+            <div class="container mt-5 text-center">
+
+                <div class="alert alert-success">
+                    <h3>✅ تم تسجيل طلبك بنجاح</h3>
+                    <p>سوف يتم مراجعة طلبك في أقرب وقت.</p>
+                </div>
+
+                <a href="/property/create" class="btn btn-primary mt-3">
+                    إضافة طلب جديد
+                </a>
+
+            </div>
+        </t>
+    </template>
+</odoo>

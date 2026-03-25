@@ -20,6 +20,7 @@
         'views/res_partner_views.xml',
         'views/property_history.xml',
         'views/property_info_template.xml',
+        'views/property_create_template.xml',
     ],
     'application': True,
 }
