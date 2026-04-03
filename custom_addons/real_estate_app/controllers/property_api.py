@@ -91,3 +91,32 @@ class PropertyApi(http.Controller):
                    'message': error,
                }, status=400
            )
+
+    ###READ OPERATION
+    @http.route('/read/property/<int:property_id>', methods=['GET'], type='http', auth='none', csrf=False)
+    def update_property(self, property_id):
+       try:
+           property_id = request.env['property'].sudo().search([('id', '=', property_id)])
+           ##Check ID is right
+           if not property_id:
+               return request.make_json_response(
+                   {
+                       'message': 'ID IS INCORRECT',
+                   }, status=400
+               )
+           ## read data
+           return request.make_json_response(
+               {
+                   'message': 'READ Property',
+                   'name': property_id.name,
+                   'ref': property_id.ref,
+                   'post_code': property_id.post_code
+               }, status=200
+           )
+       except Exception as error:
+           return request.make_json_response(
+               {
+                   'message': error,
+               }, status=400
+           )
+
