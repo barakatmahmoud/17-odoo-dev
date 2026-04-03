@@ -94,7 +94,7 @@ class PropertyApi(http.Controller):
 
     ###READ OPERATION
     @http.route('/read/property/<int:property_id>', methods=['GET'], type='http', auth='none', csrf=False)
-    def update_property(self, property_id):
+    def read_property(self, property_id):
        try:
            property_id = request.env['property'].sudo().search([('id', '=', property_id)])
            ##Check ID is right
@@ -119,4 +119,31 @@ class PropertyApi(http.Controller):
                    'message': error,
                }, status=400
            )
+
+    ###DELETE OPERATION
+    @http.route('/delete/property/<int:property_id>', methods=['DELETE'], type='http', auth='none', csrf=False)
+    def delete_property(self, property_id):
+       try:
+           property_id = request.env['property'].sudo().search([('id', '=', property_id)])
+           ##Check ID is right
+           if not property_id:
+               return request.make_json_response(
+                   {
+                       'message': 'ID IS INCORRECT',
+                   }, status=400
+               )
+           ## delete data
+           property_id.unlink()
+           return request.make_json_response(
+               {
+                   'message': 'Property Deleted',
+               }, status=200
+           )
+       except Exception as error:
+           return request.make_json_response(
+               {
+                   'message': error,
+               }, status=400
+           )
+
 
