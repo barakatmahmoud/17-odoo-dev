@@ -2,6 +2,7 @@ from datetime import timedelta
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError, UserError
 from odoo.osv import expression
+import requests
 
 class Property(models.Model):
     _name = 'property'
@@ -382,7 +383,16 @@ class Property(models.Model):
                 res['arch'] = arch
         return res
 
-
+    ## Access API
+    def get_properties(self):
+        payload = dict()
+        try:
+            response = requests.get('http://localhost:8069/read/properties', data=payload)
+            if response.status_code == 200:
+                print("SUCCESS", response)
+                print("RESPONSE CONTENT", response.content)
+        except Exception as error:
+            raise ValidationError(str(error))
 
 
 ### ADD Lines in Model ###
