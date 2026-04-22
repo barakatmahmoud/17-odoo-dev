@@ -144,3 +144,83 @@
 // element.innerText = "Hello Jsss";
 // outer text
 // element.outerText = "Hello Jsss";
+
+// use it to call this function in html, and use as external function
+// function hello(){
+//     console.log('Hello');
+// }
+
+// let btn = document.getElementById('btn');
+// first way to use event
+// btn.onclick = function (){
+//     console.log("Clicked!!!!");
+// }
+
+// second way to use event call external function
+// btn.onclick = hello;
+
+// addEventListener
+// btn.addEventListener('click', function (){
+//     console.log("Clicked by AddEventListener!!");
+// })
+
+
+// difference between onclick , addEventListener
+// btn.onclick = function (){
+//     console.log("firest!!!!");
+// }
+// // only second will execute
+// btn.onclick = function (){
+//     console.log("second!!!!");
+// }
+
+// when use addEventListener first function and second function will execute
+// btn.addEventListener('click', function (){
+//     console.log("First!!!");
+// })
+//
+// btn.addEventListener('click', function (){
+//     console.log("Second!!!");
+// })
+
+// event with mouse
+// btn.addEventListener("click", () => console.log("Clicked!!"));
+// btn.addEventListener("dblclick", () => console.log("DblClicked!!"));
+// btn.addEventListener("mouseover", () => console.log("MouseOver!!"));
+
+// event with keyboard
+// input = document.getElementById('input')
+// input.addEventListener("keydown", (e) => {
+//   console.log(e.key);
+//   console.log(e.code);
+//   console.log(e.ctrlKey);
+// });
+
+// event object
+// btn.addEventListener("click", function (event) {
+//   console.log('Event : ',event);
+//   console.log('Event Target : ',event.target);
+// });
+
+// check value in input
+// var nameInput = document.getElementById('name');
+// var submitBtn = document.getElementById('submit');
+// submitBtn.addEventListener('click', function (ev){
+//     ev.preventDefault();
+//     console.log("Name:", nameInput.value);
+//     if(!nameInput.value){
+//         alert("Enter Name.");
+//     }
+//     else{
+//         console.log('Okay');
+//     }
+// })
+
+
+//  e.preventDefault(); >> use to block default behavior
+// document.getElementById("myForm").addEventListener("submit", function (e) {
+//       e.preventDefault();
+//       console.log("Form prevented");
+// });
+
+
