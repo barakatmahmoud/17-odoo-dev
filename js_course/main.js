@@ -223,4 +223,40 @@
 //       console.log("Form prevented");
 // });
 
+// Program to convert dollar to pound
+// var dollar = document.getElementById('dollar');
+// var pound = document.getElementById('pound');
+// dollar.onkeyup = function (){
+//     pound.value = dollar.value * 50;
+// }
+// pound.onkeyup = function (){
+//     dollar.value = pound.value / 50;
+// }
 
+
+//after , before, inside
+// let after = document.getElementById('after');
+// let before = document.getElementById('before');
+// let inside = document.getElementById('inside');
+// let content = document.getElementById('content');
+// let container = document.getElementById('container');
+//
+// container.style.background = '#ffa';
+// container.style.height = '50px';
+//
+// after.onclick = function (){
+//     container.after(content);
+// }
+// before.onclick = function (){
+//     container.before(content);
+// }
+// inside.onclick = function (){
+//     container.append(content);
+// }
+
+
+//toggle >> add and remove class
+// let hello = document.getElementById('hello');
+// hello.onclick = function (){
+//     hello.classList.toggle('name');
+// }
