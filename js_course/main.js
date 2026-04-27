@@ -260,3 +260,19 @@
 // hello.onclick = function (){
 //     hello.classList.toggle('name');
 // }
+
+// setTimeout , clearTimeout >> Execution for one time
+// let hello = setTimeout(function (){
+//     console.log('Hello');
+// },5000)
+//
+// clearTimeout(hello);
+
+// setInternal , clearInternal >>  Execution for many time
+// let i = 0;
+// let hello = setInterval(function(){
+//     console.log(i++);
+//     if(i == 4){
+//         clearInterval(hello);
+//     }
+// }, 3000)
