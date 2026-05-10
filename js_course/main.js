@@ -1,3 +1,81 @@
+// primitive data type (string, number, boolean, undefined, null)
+// non-primitive data type (object, function, array)
+
+// object data type
+// var car = {
+//     brand : 'Toyota',
+//     price : 100000,
+//     model : '2020'
+// }
+// to access element
+// console.log(car['brand']);
+// console.log(car.brand);
+
+// function data type (1- void function , 2- returning function)
+// 1- void function
+// function hello(){
+//     console.log('Hello');
+// }
+// hello();
+// *another way
+// hello = function (){
+//     console.log('Hello');
+// }
+// hello();
+
+// 2- returning function
+// function addNum(x, y){
+//     return x + y;
+// }
+// console.log(addNum(3,4));
+
+// array
+// var emps = ['ali', 'sayed', 'mahmoud'];
+// console.log(emps);
+
+// *another way
+// emps = new Array(2);
+// console.log(emps);
+// emps[0] = 'Ali';
+// console.log(emps);
+
+// flow control 1-[(conditional statement) *if else *switch ,, (exception handling) *throw *try , catch, finally]
+// if else
+// var name = 'Ali'
+// if(name == 'Ali'){
+//     console.log('Name Equal Ali');
+// }
+// else if(name == 'Ahmed'){
+//     console.log('Name Equal Ahmed');
+// }
+// else{
+//     console.log('Name Not Equal Ahmed or Ali');
+// }
+
+// switch
+// var name = 'Ali';
+// switch (name){
+//     case 'Ali':
+//         {console.log('Hello Ali')}
+//         break;
+//     case 'Ahmed':
+//         {console.log('Hello Ahmed')}
+//         break;
+//     default:
+//         {console.log('Name Not Ahmed or Ali')}
+//         break;
+// }
+
+// try, catch, finally
+// var x = 'ahmed';
+// try{
+//     console.log(`My name is ${name} and age is ${age}`);
+// }
+// catch (error){
+//     console.log("You can't Concatenation", error.message);
+// }
+
+
 // document >> HTML
 // document.write('Hello World!');
 
@@ -264,7 +342,7 @@
 // setTimeout , clearTimeout >> Execution for one time
 // let hello = setTimeout(function (){
 //     console.log('Hello');
-// },5000)
+// },2000)
 //
 // clearTimeout(hello);
 

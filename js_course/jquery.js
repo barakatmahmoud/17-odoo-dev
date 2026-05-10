@@ -39,7 +39,7 @@
 // $(document).ready(function (){
 //     $('button').click(function (){
 //         $('p').toggle(function (){
-//             $('span').toggle;
+//             $('span').toggle();
 //         });
 //     })
 // })
