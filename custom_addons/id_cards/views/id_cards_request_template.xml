@@ -1,0 +1,89 @@
+<odoo>
+    <template id="id_cards_request_template">
+        <t t-call="website.layout">
+            <div class="container mt-5">
+                <h2>Create New ID Card</h2>
+                <form action="/id/cards/submit" method="post" class="id_cards_form" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="mb-3">
+                        <label>Name</label>
+                        <input type="text" name="name" class="form-control" required="1"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>ID Number</label>
+                        <input type="text" id="id_number" maxlength="14" name="id_number" class="form-control" required="1"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Phone Number</label>
+                        <input type="text" name="phone_number" maxlength="11" id="phone_number" class="form-control" required="1"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>E-mail</label>
+                        <input type="text" name="email" id="email" class="form-control" required="1"/>
+                    </div>
+
+                    <div class="mb-3">
+                       <select name="country_id" id="country_id" required="1">
+                           <option value="">Select Country</option>
+                           <t t-foreach="countries" t-as="country">
+                               <option t-att-value="country.id">
+                                    <t t-esc="country.name"/>
+                               </option>
+                           </t>
+                       </select>
+                    </div>
+
+                    <div class="mb-3">
+                       <select id="city_id" name="city_id">
+                            <option value="">
+                            Select City
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Address</label>
+                        <textarea name="address" class="form-control"/>
+                    </div>
+
+                    <div class="mb-3"><label>Birth Date</label>
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            class="form-control"
+                            required="required"/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Attachment</label> <br/>
+                        <input type="file" name="attachment" required="required"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        Create
+                    </button>
+
+                </form>
+            </div>
+        </t>
+    </template>
+
+     <template id="id_cards_success_template">
+        <t t-call="website.layout">
+            <div class="container mt-5 text-center">
+                <div class="alert alert-success">
+                    <h3>✅ تم تسجيل طلبك بنجاح</h3>
+                    <p>سوف يتم مراجعة طلبك في أقرب وقت.</p>
+                </div>
+                <a href="/id/cards/create" class="btn btn-primary mt-3">
+                    إضافة طلب جديد
+                </a>
+            </div>
+        </t>
+    </template>
+</odoo>

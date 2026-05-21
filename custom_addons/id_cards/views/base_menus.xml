@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+    <menuitem
+        id="id_cards_root_menu"
+        name="ID Cards"/>
+
+    <menuitem
+        id="id_cards_request"
+        name="ID Cards Request"
+        parent="id_cards_root_menu"/>
+    </data>
+</odoo>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="id_cards_request_tree_view" model="ir.ui.view">
+        <field name="name">Id Cards Request Tree View</field>
+        <field name="model">id.cards.request</field>
+        <field name="arch" type="xml">
+            <tree>
+               <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="id_cards_request_form_view" model="ir.ui.view">
+        <field name="name">Id Cards Request Form View</field>
+        <field name="model">id.cards.request</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="id_number"/>
+                        <field name="phone_number" widget="phone"/>
+                        <field name="email" widget="email"/>
+                        <field name="country_id"/>
+                        <field name="city_id"/>
+                        <field name="address"/>
+                        <field name="date" widget="date"/>
+                        <field name="attachment" filename="attachment_name" widget="binary"/>
+                        <field name="attachment_name" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="id_cards_request_action" model="ir.actions.act_window">
+        <field name="name">ID Cards request action</field>
+        <field name="res_model">id.cards.request</field>
+    </record>
+
+    <menuitem
+            id="sub_id_cards_request"
+            name="ID Cards Request"
+            parent="id_cards_request"
+            action="id_cards_request_action"/>
+</odoo>
