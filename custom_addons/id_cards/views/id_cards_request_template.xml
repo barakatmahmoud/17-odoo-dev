@@ -59,6 +59,17 @@
                             required="required"/>
                     </div>
 
+                     <div class="mb-3">
+                       <select name="blood_type" required="1">
+                           <option value="">Select Blood Type</option>
+                           <t t-foreach="blood_types" t-as="b">
+                               <option t-att-value="b.id">
+                                    <t t-esc="b.name"/>
+                               </option>
+                           </t>
+                       </select>
+                    </div>
+
                     <div class="mb-3">
                         <label>Attachment</label> <br/>
                         <input type="file" name="attachment" required="required"/>

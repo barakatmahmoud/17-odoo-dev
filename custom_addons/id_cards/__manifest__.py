@@ -9,6 +9,7 @@
         'security/ir.model.access.csv',
        'views/base_menus.xml',
        'views/id_cards_request_views.xml',
+       'views/blood_type_views.xml',
        'views/id_cards_request_template.xml',
     ],
     'assets': {

@@ -9,5 +9,10 @@
         id="id_cards_request"
         name="ID Cards Request"
         parent="id_cards_root_menu"/>
+
+    <menuitem
+        id="configuration"
+        name="Configuration"
+        parent="id_cards_root_menu"/>
     </data>
 </odoo>

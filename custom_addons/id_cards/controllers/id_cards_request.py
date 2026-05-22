@@ -8,10 +8,10 @@ class IDCardsRequest(http.Controller):
     @http.route('/id/cards/create', type='http', auth='public', website=True)
     def create_id_cards(self, **kwargs):
         countries = request.env['res.country'].sudo().search([])
-        cities = request.env['res.country.state'].sudo().search([('country_id', '=', countries.ids)])
+        blood_types = request.env['blood.type'].sudo().search([])
         return request.render('id_cards.id_cards_request_template',{
             'countries': countries,
-            'cities': cities,
+            'blood_types': blood_types,
         })
 
     # استقبال البيانات وعمل create
@@ -34,6 +34,7 @@ class IDCardsRequest(http.Controller):
             'city_id': kwargs.get('city_id'),
             'address': kwargs.get('address'),
             'date': kwargs.get('date'),
+            'blood_type_id': kwargs.get('blood_type'),
             'attachment': attachment_data,
             'attachment_name': attachment.filename,
 

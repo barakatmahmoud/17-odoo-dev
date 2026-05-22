@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="blood_type_tree_view" model="ir.ui.view">
+        <field name="name">Blood Type Tree View</field>
+        <field name="model">blood.type</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+               <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="blood_type_action" model="ir.actions.act_window">
+        <field name="name">Blood Type action</field>
+        <field name="res_model">blood.type</field>
+    </record>
+
+    <menuitem
+            id="blood_type_menu"
+            name="Blood Type Menu"
+            parent="configuration"
+            action="blood_type_action"/>
+</odoo>

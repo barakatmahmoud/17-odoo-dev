@@ -25,6 +25,7 @@
                         <field name="city_id"/>
                         <field name="address"/>
                         <field name="date" widget="date"/>
+                        <field name="blood_type_id"/>
                         <field name="attachment" filename="attachment_name" widget="binary"/>
                         <field name="attachment_name" invisible="1"/>
                     </group>

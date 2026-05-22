@@ -14,3 +14,4 @@ class IdCardsRequest(models.Model):
     date = fields.Date(required=True, readonly=True)
     attachment = fields.Binary(required=True, readonly=True)
     attachment_name = fields.Char(readonly=True)
+    blood_type_id = fields.Many2one('blood.type', required=True, readonly=True)
