@@ -10,12 +10,14 @@
        'views/base_menus.xml',
        'views/id_cards_request_views.xml',
        'views/blood_type_views.xml',
+        'views/map_template.xml',
        'views/id_cards_request_template.xml',
     ],
     'assets': {
         'web.assets_frontend': [
             'id_cards/static/src/js/id_cards_validation.js',
             'id_cards/static/src/js/id_cards_change.js',
+            'id_cards/static/src/css/custom.css',
         ],
     },
     'application': True,

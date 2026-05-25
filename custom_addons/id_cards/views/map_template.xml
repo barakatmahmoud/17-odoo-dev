@@ -1,0 +1,99 @@
+<odoo>
+<template id="map_input" name="Map box">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+    <div class="mb-2">
+        <!-- الخريطة التفاعلية -->
+        <div id="map_container"
+             style="height:400px; width:100%; border:1px solid #ccc;
+                    border-radius:8px; z-index:0;"/>
+
+        <small class="text-muted">
+            <i class="fa fa-info-circle"/> اضغط على الخريطة لتحديد الموقع
+        </small>
+    </div>
+
+    <!-- الإحداثيات - hidden يتم تعبئتها تلقائياً -->
+    <input type="hidden"
+           name="latitude"
+           id="latitude_input"
+           t-att-value="latitude or '0.0'"/>
+    <input type="hidden"
+           name="longitude"
+           id="longitude_input"
+           t-att-value="longitude or '0.0'"/>
+
+    <!-- عرض الإحداثيات للمستخدم (اختياري) -->
+    <div class="row mt-2">
+        <div class="col-sm-6">
+            <label class="text-muted small">Latitude</label>
+            <input type="text" id="lat_display" class="form-control form-control-sm"
+                   readonly="readonly" t-att-value="latitude or ''"/>
+        </div>
+        <div class="col-sm-6">
+            <label class="text-muted small">Longitude</label>
+            <input type="text" id="lon_display" class="form-control form-control-sm"
+                   readonly="readonly" t-att-value="longitude or ''"/>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"/>
+    <script>
+        (function() {
+            // إحداثيات مبدئية (القاهرة افتراضياً)
+            var defaultLat = parseFloat(
+                document.getElementById('latitude_input').value
+            ) || 30.0444;
+            var defaultLon = parseFloat(
+                document.getElementById('longitude_input').value
+            ) || 31.2357;
+            var hasLocation = (
+                document.getElementById('latitude_input').value
+                &amp;&amp; parseFloat(document.getElementById('latitude_input').value) !== 0
+            );
+
+            // تهيئة الخريطة
+            var map = L.map('map_container').setView(
+                [defaultLat, defaultLon],
+                hasLocation ? 14 : 6
+            );
+
+            L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                { attribution: '© OpenStreetMap' }
+            ).addTo(map);
+
+            // ضع marker لو في إحداثيات محفوظة
+            var marker = null;
+            if (hasLocation) {
+                marker = L.marker([defaultLat, defaultLon]).addTo(map);
+            }
+
+            // لما المستخدم يضغط على الخريطة
+            map.on('click', function(e) {
+                var lat = e.latlng.lat.toFixed(7);
+                var lon = e.latlng.lng.toFixed(7);
+
+                // حدّث الـ hidden inputs
+                document.getElementById('latitude_input').value  = lat;
+                document.getElementById('longitude_input').value = lon;
+
+                // حدّث الـ display inputs
+                document.getElementById('lat_display').value = lat;
+                document.getElementById('lon_display').value = lon;
+
+                // حرّك الـ marker
+                if (marker) {
+                    map.removeLayer(marker);
+                }
+                marker = L.marker(e.latlng).addTo(map);
+            });
+        })();
+    </script>
+
+</template>
+</odoo>

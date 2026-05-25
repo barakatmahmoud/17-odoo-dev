@@ -50,6 +50,11 @@
                         <textarea name="address" class="form-control"/>
                     </div>
 
+                    <div class="mb-3">
+                        <label>Location</label>
+                        <t t-call="id_cards.map_input"/>
+                    </div>
+
                     <div class="mb-3"><label>Birth Date</label>
                         <input
                             type="date"

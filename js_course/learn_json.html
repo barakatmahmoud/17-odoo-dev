@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Json</title>
+</head>
+<body>
+<div id="show"></div>
+<script src="jquery.min.js"></script>
+<script>
+    $(function (){
+        // use get.JSON
+        // $.getJSON("test.json", function (data){
+        //     console.log(data);
+        //     var content = "";
+        //     for (var x in data){
+        //         content += data[x].name + '<br/>';
+        //     }
+        //     $('#show').html(content);
+        //     console.log(content);
+        // })
+
+        // use ajax
+        $.ajax({
+            url : "test.json",
+            dateType : "json",
+            cache  : false,
+            success : function (data, status){
+              $.each(data, function (index){
+                  $("#show").append("<div>" + data[index].name + "</div>")
+              })
+            },
+            error : function (xhr, textStatus, err){
+                console.log(xhr);
+                console.log(textStatus);
+                console.log(err);
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

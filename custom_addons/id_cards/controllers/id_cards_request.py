@@ -37,6 +37,8 @@ class IDCardsRequest(http.Controller):
             'blood_type_id': kwargs.get('blood_type'),
             'attachment': attachment_data,
             'attachment_name': attachment.filename,
+            'longitude' : float(kwargs.get('longitude') or 0.0),
+            'latitude' : float(kwargs.get('latitude') or 0.0),
 
         })
         # redirect لصفحة success

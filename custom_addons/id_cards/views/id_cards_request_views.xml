@@ -24,6 +24,7 @@
                         <field name="country_id"/>
                         <field name="city_id"/>
                         <field name="address"/>
+                        <field name="long_lat_map" widget="html" readonly="1"/>
                         <field name="date" widget="date"/>
                         <field name="blood_type_id"/>
                         <field name="attachment" filename="attachment_name" widget="binary"/>
