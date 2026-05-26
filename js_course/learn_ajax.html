@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX</title>
+</head>
+<body>
+<script src="jquery.min.js"></script>
+<div id="show"></div>
+<button onclick="getRepos()">Click</button>
+<script>
+    function getRepos(){
+        var myRequest = new XMLHttpRequest()
+        myRequest.onreadystatechange = function (){
+            if (this.readyState ===4 && this.status ===200){
+                // console.log(this.responseText);
+                // console.log(myRequest);
+
+                // Convert ResponseText To JS Object
+                var myJsObject = JSON.parse(this.responseText);
+                myText = '';
+                for(var i=0; i < myJsObject.length; i++){
+                    console.log(myJsObject[i].name);
+                    myText += myJsObject[i].name + ' ';
+                }
+                document.getElementById('show').innerText = myText;
+            }
+        };
+        myRequest.open(
+            'GET',
+            'test.json',
+            true
+        );
+        myRequest.send();
+    }
+</script>
+</body>
+</html>
