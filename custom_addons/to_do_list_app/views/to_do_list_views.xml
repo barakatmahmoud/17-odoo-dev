@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_to_do_list_tree" model="ir.ui.view">
+        <field name="name">to.do.list.tree</field>
+        <field name="model">to.do.list</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="completed"/>
+                <field name="color" widget="color"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_to_do_list_form" model="ir.ui.view">
+        <field name="name">to.do.list.form</field>
+        <field name="model">to.do.list</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="completed"/>
+                        <field name="color" widget="color"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_to_do_list" model="ir.actions.act_window">
+        <field name="name">To Do List</field>
+        <field name="res_model">to.do.list</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+     <record id="client_action_to_do_list" model="ir.actions.client">
+        <field name="name">To Do List Client</field>
+        <field name="tag">to_do_list_owl_action</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_to_do_root"
+              name="To Do"/>
+
+    <menuitem id="menu_to_do_list"
+              name="Tasks"
+              parent="menu_to_do_root"
+              action="action_to_do_list"/>
+
+    <menuitem id="client_menu_to_do_list"
+              name="Tasks"
+              parent="menu_to_do_root"
+              action="client_action_to_do_list"/>
+
+</odoo>
