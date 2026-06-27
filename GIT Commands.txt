@@ -9,4 +9,7 @@ git restore --staged File_name (to rollback my changes on staged area)
 
 git revert hashcodeofcommit (to revert commit)
 
+*** Scaffold commands ***
+python3 [odoo-bin path] scaffold [module name] [custom-addons path]
+
 

@@ -188,6 +188,16 @@ class Property(models.Model):
         ### If User Has Specific group
         # self.env.user.has_group('your_module.group_hr_manager')
 
+        # N+1 Query Problem
+        orders = self.env['sale.order'].search([])
+        print('orders :', orders)
+        for order in orders:
+            print('o >> ',order.partner_id.email)
+        emails = orders.mapped('partner_id.email')
+        print('email', emails)
+
+
+
     # def create(self, vals):
     #     res = super(Property, self).create(vals)
     #     ### ADD Sequence ###

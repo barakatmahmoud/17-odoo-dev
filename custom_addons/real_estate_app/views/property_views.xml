@@ -8,7 +8,7 @@
                 <field name="name"/>
                 <field name="post_code"/>
                 <field name="date_availability"/>
-                <field name="selling_price"/>
+                <field name="selling_price" sum="Total"/>
                 <field name="is_late" invisible="1"/>
                 <field name="garden"/>
                 <field name="garage"/>

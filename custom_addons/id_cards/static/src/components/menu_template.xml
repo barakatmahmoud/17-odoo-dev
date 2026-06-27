@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates>
+    <t t-name="owl_menu_template">
+        <div>
+            <h2>Hello In OWL MENU</h2>
+            <p t-esc="state.value"/>
+        </div>
+
+    </t>
+</templates>
