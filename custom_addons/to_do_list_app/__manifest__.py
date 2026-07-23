@@ -4,10 +4,11 @@
     'category': 'Productivity',
     'summary': 'Simple To Do List',
     'author': 'Barakt',
-    'depends': ['base'],
+    'depends': ['base', 'web'],
     'data': [
         'security/ir.model.access.csv',
         'views/to_do_list_views.xml',
+        'views/res_partner_list_view.xml',
     ],
     'application': True,
     'installable': True,

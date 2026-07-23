@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+      <t t-name="to_do_list_app.kanbanViewInherit.Buttons.Inherit" t-inherit="web.KanbanView.Buttons" owl="1">
+         <xpath expr="//div" position="inside">
+             <button class="btn btn-primary" t-on-click="getSales">View Orders</button>
+         </xpath>
+    </t>
+</templates>

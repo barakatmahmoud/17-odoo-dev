@@ -191,8 +191,10 @@ class Property(models.Model):
         # N+1 Query Problem
         orders = self.env['sale.order'].search([])
         print('orders :', orders)
+        # bad code
         for order in orders:
             print('o >> ',order.partner_id.email)
+        # good code
         emails = orders.mapped('partner_id.email')
         print('email', emails)
 

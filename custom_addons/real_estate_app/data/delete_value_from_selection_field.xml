@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <delete model="ir.model.fields.selection"
+                search="[('field_id.model', '=', 'model_name'),
+                        ('field_id.name', '=', 'field_name'),
+                        ('value', '=', 'selection_value')]"/>
+
+    </data>
+</odoo>
