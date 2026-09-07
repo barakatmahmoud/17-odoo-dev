@@ -1,0 +1,291 @@
+2026-09-06 16:07:29,035 17541 INFO ? odoo: Odoo version saas~17.4 
+2026-09-06 16:07:29,036 17541 INFO ? odoo: Using configuration file at /home/barakat/Desktop/odoo17/debian/odoo.conf 
+2026-09-06 16:07:29,036 17541 INFO ? odoo: addons paths: ['/home/barakat/Desktop/odoo17/odoo/addons', '/home/barakat/.local/share/Odoo/addons/saas~17.4', '/home/barakat/Desktop/odoo17/addons', '/home/barakat/Desktop/17-odoo-dev/custom_addons', '/home/barakat/Desktop/odoo17'] 
+2026-09-06 16:07:29,036 17541 INFO ? odoo: database: odoo17@localhost:5432 
+2026-09-06 16:07:29,191 17541 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltopdf binary at /usr/local/bin/wkhtmltopdf 
+2026-09-06 16:07:29,199 17541 INFO ? odoo.addons.base.models.ir_actions_report: Will use the Wkhtmltoimage binary at /usr/local/bin/wkhtmltoimage 
+2026-09-06 16:07:29,438 17541 INFO ? odoo.service.server: HTTP service (werkzeug) running on barakat-HP-ZBook-Firefly-15-G7-Mobile-Workstation:8069 
+2026-09-06 16:07:29,468 17541 INFO DB17 odoo.modules.loading: loading 1 modules... 
+2026-09-06 16:07:29,477 17541 INFO DB17 odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-09-06 16:07:29,488 17541 WARNING DB17 odoo.modules.module: Missing `license` key in manifest for 'id_cards', defaulting to LGPL-3 
+2026-09-06 16:07:29,500 17541 WARNING DB17 odoo.modules.module: Missing `license` key in manifest for 'to_do_list_app', defaulting to LGPL-3 
+2026-09-06 16:07:29,500 17541 WARNING DB17 odoo.modules.module: Missing `license` key in manifest for 'real_estate_app', defaulting to LGPL-3 
+2026-09-06 16:07:29,519 17541 INFO DB17 odoo.modules.loading: loading 66 modules... 
+2026-09-06 16:07:30,255 17541 WARNING DB17 odoo.models: The model id.cards.request has no _description 
+2026-09-06 16:07:30,255 17541 WARNING DB17 odoo.models: The model blood.type has no _description 
+2026-09-06 16:07:30,262 17541 WARNING DB17 odoo.models: The model property has no _description 
+2026-09-06 16:07:30,262 17541 WARNING DB17 odoo.models: The model property.line has no _description 
+2026-09-06 16:07:30,262 17541 WARNING DB17 odoo.models: The model owner has no _description 
+2026-09-06 16:07:30,262 17541 WARNING DB17 odoo.models: The model tag has no _description 
+2026-09-06 16:07:30,263 17541 WARNING DB17 odoo.models: The model property.history has no _description 
+2026-09-06 16:07:30,263 17541 WARNING DB17 odoo.models: The model property.history.line has no _description 
+2026-09-06 16:07:30,263 17541 WARNING DB17 odoo.models: The model change.state has no _description 
+2026-09-06 16:07:30,310 17541 INFO DB17 odoo.modules.loading: 66 modules loaded in 0.79s, 0 queries (+0 extra) 
+2026-09-06 16:07:30,527 17541 INFO DB17 odoo.modules.loading: Modules loaded. 
+2026-09-06 16:07:30,533 17541 INFO DB17 odoo.modules.registry: Registry loaded in 1.096s 
+2026-09-06 16:07:48,370 17541 INFO DB17 odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-09-06 16:07:48,487 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:07:48] "GET /websocket?version=17.4-2 HTTP/1.1" 101 - 9 0.017 0.114
+2026-09-06 16:07:48,845 17541 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-09-06 16:08:30,785 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-09-06 16:08:30,899 17541 INFO DB17 odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-09-06 16:08:31,029 17541 INFO DB17 odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-09-06 16:08:31,045 17541 INFO DB17 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-06 16:08:31,047 17541 INFO DB17 odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-09-06 16:08:31,067 17541 INFO DB17 odoo.addons.auth_totp.models.auth_totp: GC'd 0 totp devices entries 
+2026-09-06 16:08:31,080 17541 INFO DB17 odoo.models.unlink: User #1 deleted bus.bus records with IDs: [1431, 1432, 1433, 1434, 1435, 1436] 
+2026-09-06 16:08:31,236 17541 INFO DB17 odoo.addons.sms.models.sms_sms: GC'd 0 sms marked for deletion 
+2026-09-06 16:08:31,403 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) done in 0.618s 
+2026-09-06 16:08:31,411 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) processed 0 records, 0 records remaining 
+2026-09-06 16:08:31,415 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) completed 
+2026-09-06 16:08:52,818 17541 WARNING DB17 odoo.modules.module: Missing `license` key in manifest for 'real_estate_app', defaulting to LGPL-3 
+2026-09-06 16:08:52,821 17541 WARNING DB17 odoo.modules.module: Missing `license` key in manifest for 'to_do_list_app', defaulting to LGPL-3 
+2026-09-06 16:08:52,839 17541 WARNING DB17 odoo.modules.module: Missing `license` key in manifest for 'id_cards', defaulting to LGPL-3 
+2026-09-06 16:08:53,135 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "GET /odoo/action-90/1 HTTP/1.1" 200 - 108 0.055 0.781
+2026-09-06 16:08:53,557 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "GET /bus/websocket_worker_bundle?v=17.4-2 HTTP/1.1" 304 - 4 0.002 0.005
+2026-09-06 16:08:53,675 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "POST /web/action/load HTTP/1.1" 200 - 11 0.014 0.012
+2026-09-06 16:08:53,716 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "GET /websocket?version=17.4-2 HTTP/1.1" 101 - 1 0.001 0.040
+2026-09-06 16:08:53,716 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 9 0.016 0.032
+2026-09-06 16:08:53,740 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "POST /mail/action HTTP/1.1" 200 - 33 0.043 0.039
+2026-09-06 16:08:53,756 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "POST /web/dataset/call_kw/tag/get_views HTTP/1.1" 200 - 21 0.018 0.052
+2026-09-06 16:08:53,773 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:53] "POST /web/dataset/call_kw/tag/web_read HTTP/1.1" 200 - 3 0.002 0.004
+2026-09-06 16:08:55,362 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:08:55] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.002 0.006
+2026-09-06 16:09:03,249 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /odoo/action-90/1 HTTP/1.1" 200 - 20 0.009 0.025
+2026-09-06 16:09:03,314 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/assets/c13842b/web.assets_web.min.css HTTP/1.1" 200 - 3 0.005 0.033
+2026-09-06 16:09:03,338 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/webclient/translations/85ef3b89aa614362993fda586e814098f7b26f13?lang=en_US HTTP/1.1" 200 - 1 0.001 0.051
+2026-09-06 16:09:03,353 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/assets/10a7381/web.assets_web.min.js HTTP/1.1" 200 - 3 0.004 0.059
+2026-09-06 16:09:03,355 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/assets/bc61f51/web.assets_web_print.min.css HTTP/1.1" 200 - 3 0.003 0.031
+2026-09-06 16:09:03,449 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/webclient/load_menus/35ac09135a8ab160063779a317db2abd21db87066e694707b3830b7389dc51a3 HTTP/1.1" 200 - 88 0.044 0.119
+2026-09-06 16:09:03,565 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/webclient/translations/85ef3b89aa614362993fda586e814098f7b26f13?lang=en_US HTTP/1.1" 200 - 1 0.001 0.003
+2026-09-06 16:09:03,575 17541 INFO ? werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.004
+2026-09-06 16:09:03,586 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 7 0.008 0.009
+2026-09-06 16:09:03,587 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /bus/websocket_worker_bundle?v=17.4-2 HTTP/1.1" 304 - 3 0.003 0.009
+2026-09-06 16:09:03,679 17541 INFO ? werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.004
+2026-09-06 16:09:03,686 17541 INFO ? werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.012
+2026-09-06 16:09:03,695 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "POST /web/action/load HTTP/1.1" 200 - 9 0.009 0.018
+2026-09-06 16:09:03,708 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "GET /websocket?version=17.4-2 HTTP/1.1" 101 - 1 0.001 0.016
+2026-09-06 16:09:03,721 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "POST /web/dataset/call_kw/tag/get_views HTTP/1.1" 200 - 2 0.002 0.016
+2026-09-06 16:09:03,731 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "POST /mail/action HTTP/1.1" 200 - 17 0.021 0.030
+2026-09-06 16:09:03,739 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:03] "POST /web/dataset/call_kw/tag/web_read HTTP/1.1" 200 - 2 0.001 0.004
+2026-09-06 16:09:53,421 17541 INFO ? odoo.modules.registry: Reloading the model registry after database signaling. 
+2026-09-06 16:09:53,434 17541 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-06 16:09:53,449 17541 INFO ? odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2026-09-06 16:09:53,464 17541 INFO ? odoo.modules.loading: loading 66 modules... 
+2026-09-06 16:09:53,619 17541 WARNING ? odoo.models: The model id.cards.request has no _description 
+2026-09-06 16:09:53,619 17541 WARNING ? odoo.models: The model blood.type has no _description 
+2026-09-06 16:09:53,620 17541 WARNING ? odoo.models: The model property has no _description 
+2026-09-06 16:09:53,620 17541 WARNING ? odoo.models: The model property.line has no _description 
+2026-09-06 16:09:53,621 17541 WARNING ? odoo.models: The model owner has no _description 
+2026-09-06 16:09:53,622 17541 WARNING ? odoo.models: The model tag has no _description 
+2026-09-06 16:09:53,622 17541 WARNING ? odoo.models: The model property.history has no _description 
+2026-09-06 16:09:53,623 17541 WARNING ? odoo.models: The model property.history.line has no _description 
+2026-09-06 16:09:53,623 17541 WARNING ? odoo.models: The model change.state has no _description 
+2026-09-06 16:09:53,636 17541 INFO ? odoo.modules.loading: 66 modules loaded in 0.17s, 0 queries (+0 extra) 
+2026-09-06 16:09:53,913 17541 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-06 16:09:53,919 17541 INFO ? odoo.modules.registry: Registry loaded in 0.498s 
+2026-09-06 16:09:53,922 17541 INFO DB17 odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-09-06 16:09:54,016 17541 INFO DB17 werkzeug: 127.0.0.1 - - [06/Sep/2026 16:09:54] "POST /web/dataset/call_kw/tag/web_save HTTP/1.1" 200 - 31 0.028 0.570
+2026-09-07 11:40:05,932 17541 INFO DB17 odoo.addons.base.models.res_device: User 2 inserts device log (1no0Kx47jRajO2oBnATQr0IKvSZOfrOAem2Z0f1ZPn) 
+2026-09-07 11:40:05,941 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 11:40:05] "GET /websocket?version=17.4-2 HTTP/1.1" 101 - 3 0.011 0.069
+2026-09-07 11:40:14,411 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) starting 
+2026-09-07 11:40:14,420 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) done in 0.010s 
+2026-09-07 11:40:14,425 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,429 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Month' (5) completed 
+2026-09-07 11:40:14,440 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) starting 
+2026-09-07 11:40:14,444 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) done in 0.005s 
+2026-09-07 11:40:14,447 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,452 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) completed 
+2026-09-07 11:40:14,460 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: send web push notification' (8) starting 
+2026-09-07 11:40:14,464 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: send web push notification' (8) done in 0.004s 
+2026-09-07 11:40:14,467 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: send web push notification' (8) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,471 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: send web push notification' (8) completed 
+2026-09-07 11:40:14,479 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (9) starting 
+2026-09-07 11:40:14,485 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (9) done in 0.006s 
+2026-09-07 11:40:14,488 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (9) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,493 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (9) completed 
+2026-09-07 11:40:14,502 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (10) starting 
+2026-09-07 11:40:14,506 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (10) done in 0.004s 
+2026-09-07 11:40:14,510 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (10) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,513 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Discuss: users settings unmute' (10) completed 
+2026-09-07 11:40:14,523 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'HR Employee: check work permit validity' (12) starting 
+2026-09-07 11:40:14,530 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'HR Employee: check work permit validity' (12) done in 0.007s 
+2026-09-07 11:40:14,534 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'HR Employee: check work permit validity' (12) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,537 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'HR Employee: check work permit validity' (12) completed 
+2026-09-07 11:40:14,545 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) starting 
+2026-09-07 11:40:14,550 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) done in 0.005s 
+2026-09-07 11:40:14,554 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,558 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) completed 
+2026-09-07 11:40:14,567 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) starting 
+2026-09-07 11:40:14,571 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) done in 0.004s 
+2026-09-07 11:40:14,575 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,578 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) completed 
+2026-09-07 11:40:14,587 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Property: Check selling Date' (16) starting 
+2026-09-07 11:40:14,604 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Property: Check selling Date' (16) done in 0.017s 
+2026-09-07 11:40:14,608 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Property: Check selling Date' (16) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,611 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Property: Check selling Date' (16) completed 
+2026-09-07 11:40:14,619 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Account: Post draft entries with auto_post enabled and accounting date up to today' (21) starting 
+2026-09-07 11:40:14,633 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Account: Post draft entries with auto_post enabled and accounting date up to today' (21) done in 0.014s 
+2026-09-07 11:40:14,636 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Account: Post draft entries with auto_post enabled and accounting date up to today' (21) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,639 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Account: Post draft entries with auto_post enabled and accounting date up to today' (21) completed 
+2026-09-07 11:40:14,645 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Send invoices automatically' (22) starting 
+2026-09-07 11:40:14,650 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Send invoices automatically' (22) done in 0.005s 
+2026-09-07 11:40:14,654 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Send invoices automatically' (22) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,658 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Send invoices automatically' (22) completed 
+2026-09-07 11:40:14,666 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (24) starting 
+2026-09-07 11:40:14,671 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (24) done in 0.005s 
+2026-09-07 11:40:14,674 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (24) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,677 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Sales: Send pending emails' (24) completed 
+2026-09-07 11:40:14,685 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) starting 
+2026-09-07 11:40:14,693 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) done in 0.008s 
+2026-09-07 11:40:14,696 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,701 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) completed 
+2026-09-07 11:40:14,708 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (11) starting 
+2026-09-07 11:40:14,717 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (11) done in 0.009s 
+2026-09-07 11:40:14,720 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (11) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,724 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (11) completed 
+2026-09-07 11:40:14,731 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) starting 
+2026-09-07 11:40:14,735 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) done in 0.004s 
+2026-09-07 11:40:14,738 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) processed 0 records, 0 records remaining 
+2026-09-07 11:40:14,742 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) completed 
+2026-09-07 11:50:49,447 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) starting 
+2026-09-07 11:50:49,465 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) done in 0.017s 
+2026-09-07 11:50:49,473 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) processed 0 records, 0 records remaining 
+2026-09-07 11:50:49,484 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) completed 
+2026-09-07 11:50:49,504 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) starting 
+2026-09-07 11:50:49,517 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) done in 0.013s 
+2026-09-07 11:50:49,526 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) processed 0 records, 0 records remaining 
+2026-09-07 11:50:49,536 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) completed 
+2026-09-07 11:50:49,556 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) starting 
+2026-09-07 11:50:49,568 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) done in 0.012s 
+2026-09-07 11:50:49,577 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) processed 0 records, 0 records remaining 
+2026-09-07 11:50:49,587 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) completed 
+2026-09-07 11:50:49,611 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) starting 
+2026-09-07 11:50:49,628 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) done in 0.017s 
+2026-09-07 11:50:49,637 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) processed 0 records, 0 records remaining 
+2026-09-07 11:50:49,648 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) completed 
+2026-09-07 11:50:49,669 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) starting 
+2026-09-07 11:50:49,676 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) done in 0.007s 
+2026-09-07 11:50:49,681 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) processed 0 records, 0 records remaining 
+2026-09-07 11:50:49,685 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) completed 
+2026-09-07 12:44:06,289 17541 INFO DB17 odoo.addons.base.models.res_device: User 2 inserts device log (1no0Kx47jRajO2oBnATQr0IKvSZOfrOAem2Z0f1ZPn) 
+2026-09-07 12:44:06,317 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:06] "POST /web/action/load HTTP/1.1" 200 - 10 0.009 0.025
+2026-09-07 12:44:06,515 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:06] "POST /web/dataset/call_kw/property/get_views HTTP/1.1" 200 - 46 0.027 0.152
+2026-09-07 12:44:06,567 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:06] "POST /web/dataset/call_kw/res.users/has_group HTTP/1.1" 200 - 1 0.002 0.024
+2026-09-07 12:44:06,568 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:06] "POST /web/dataset/call_kw/property/web_search_read HTTP/1.1" 200 - 3 0.004 0.026
+2026-09-07 12:44:07,817 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:07] "POST /web/dataset/call_kw/property/web_search_read HTTP/1.1" 200 - 2 0.004 0.018
+2026-09-07 12:44:09,612 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:09] "POST /web/dataset/call_kw/property/web_read HTTP/1.1" 200 - 7 0.023 0.025
+2026-09-07 12:44:09,948 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:09] "POST /mail/thread/data HTTP/1.1" 200 - 25 0.040 0.062
+2026-09-07 12:44:09,986 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:44:09] "POST /mail/thread/messages HTTP/1.1" 200 - 22 0.019 0.075
+2026-09-07 12:46:46,994 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:46:46] "POST /web/dataset/call_button/property/action_open_related_owner HTTP/1.1" 200 - 13 0.013 0.026
+2026-09-07 12:46:47,062 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:46:47] "POST /web/dataset/call_kw/owner/get_views HTTP/1.1" 200 - 11 0.008 0.020
+2026-09-07 12:46:47,115 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:46:47] "POST /web/dataset/call_kw/owner/web_read HTTP/1.1" 200 - 14 0.014 0.029
+2026-09-07 12:49:56,643 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:49:56] "POST /web/dataset/call_kw/property/web_search_read HTTP/1.1" 200 - 2 0.004 0.015
+2026-09-07 12:49:59,120 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:49:59] "POST /web/dataset/call_kw/property/web_read HTTP/1.1" 200 - 6 0.008 0.022
+2026-09-07 12:49:59,296 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:49:59] "POST /mail/thread/data HTTP/1.1" 200 - 11 0.007 0.015
+2026-09-07 12:49:59,353 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:49:59] "POST /mail/thread/messages HTTP/1.1" 200 - 19 0.014 0.045
+2026-09-07 12:50:53,296 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) starting 
+2026-09-07 12:50:53,315 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) done in 0.019s 
+2026-09-07 12:50:53,325 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) processed 0 records, 0 records remaining 
+2026-09-07 12:50:53,336 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Notification: Send scheduled message notifications' (7) completed 
+2026-09-07 12:50:53,357 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) starting 
+2026-09-07 12:50:53,370 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) done in 0.013s 
+2026-09-07 12:50:53,373 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) processed 0 records, 0 records remaining 
+2026-09-07 12:50:53,377 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (14) completed 
+2026-09-07 12:50:53,385 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) starting 
+2026-09-07 12:50:53,390 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) done in 0.005s 
+2026-09-07 12:50:53,394 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) processed 0 records, 0 records remaining 
+2026-09-07 12:50:53,398 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (15) completed 
+2026-09-07 12:50:53,405 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) starting 
+2026-09-07 12:50:53,411 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) done in 0.006s 
+2026-09-07 12:50:53,414 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) processed 0 records, 0 records remaining 
+2026-09-07 12:50:53,418 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) completed 
+2026-09-07 12:50:53,426 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) starting 
+2026-09-07 12:50:53,429 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) done in 0.003s 
+2026-09-07 12:50:53,433 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) processed 0 records, 0 records remaining 
+2026-09-07 12:50:53,436 17541 INFO DB17 odoo.addons.base.models.ir_cron: Job 'Partner Autocomplete: Sync with remote DB' (13) completed 
+2026-09-07 12:50:55,227 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:50:55] "POST /web/dataset/call_kw/property/onchange HTTP/1.1" 200 - 6 0.016 0.025
+2026-09-07 12:51:04,617 17541 ERROR DB17 odoo.sql_db: bad query: INSERT INTO "property" ("bedrooms", "create_date", "create_time", "create_uid", "date_availability", "date_expected", "description", "expected_price", "facades", "garden", "garden_area", "garden_orientation", "is_late", "living_area", "name", "owner_id", "post_code", "ref", "selling_price", "state", "write_date", "write_uid") VALUES (4, '2026-09-07 12:51:04.599593', '2026-09-06 16:07:30', 2, NULL, NULL, NULL, 0.0, 0, false, 0, NULL, false, 0, 'Name From Action View', NULL, '2', 'PRO00141', 0.0, 'draft', '2026-09-07 12:51:04.599593', 2) RETURNING "id"
+ERROR: duplicate key value violates unique constraint "property_name_uniq"
+DETAIL:  Key (name)=(Name From Action View) already exists.
+ 
+2026-09-07 12:51:04,650 17541 WARNING DB17 odoo.http: The operation cannot be completed: The property name must be unique! 
+2026-09-07 12:51:04,650 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:04] "POST /web/dataset/call_kw/property/web_save HTTP/1.1" 200 - 6 0.009 0.055
+2026-09-07 12:51:11,825 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:11] "POST /web/dataset/call_kw/property/web_save HTTP/1.1" 200 - 28 0.054 0.087
+2026-09-07 12:51:11,943 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:11] "POST /mail/thread/data HTTP/1.1" 200 - 16 0.028 0.054
+2026-09-07 12:51:11,982 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:11] "POST /mail/thread/messages HTTP/1.1" 200 - 17 0.021 0.034
+2026-09-07 12:51:21,070 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:21] "POST /web/action/load HTTP/1.1" 200 - 8 0.005 0.010
+2026-09-07 12:51:21,080 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:21] "POST /report/check_wkhtmltopdf HTTP/1.1" 200 - 1 0.001 0.004
+2026-09-07 12:51:21,087 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:21] "GET /web/static/img/spin.svg HTTP/1.1" 200 - 0 0.000 0.009
+2026-09-07 12:51:21,434 17541 INFO DB17 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/7b7b3a9/web.report_assets_pdf.min.css (id:752) 
+2026-09-07 12:51:21,436 17541 INFO DB17 odoo.addons.base.models.assetsbundle: Deleting attachments [54] (matching /web/assets/_______/web.report_assets_pdf.min.css) because it was replaced with /web/assets/7b7b3a9/web.report_assets_pdf.min.css 
+2026-09-07 12:51:21,447 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:21] "GET /web/assets/7b7b3a9/web.report_assets_pdf.min.css HTTP/1.1" 200 - 14 0.021 0.031
+2026-09-07 12:51:23,050 17541 INFO DB17 odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/04a866e/web.report_assets_common.min.css (id:753) 
+2026-09-07 12:51:23,052 17541 INFO DB17 odoo.addons.base.models.assetsbundle: Deleting attachments [53] (matching /web/assets/_______/web.report_assets_common.min.css) because it was replaced with /web/assets/04a866e/web.report_assets_common.min.css 
+2026-09-07 12:51:23,064 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:23] "GET /web/assets/04a866e/web.report_assets_common.min.css HTTP/1.1" 200 - 19 0.047 1.620
+2026-09-07 12:51:23,116 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:23] "GET /web/static/fonts/lato/Lato-Bol-webfont.woff HTTP/1.1" 200 - 0 0.000 0.002
+2026-09-07 12:51:23,132 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:23] "GET /web/static/fonts/lato/Lato-Bla-webfont.woff HTTP/1.1" 200 - 0 0.000 0.003
+2026-09-07 12:51:23,135 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:23] "GET /web/static/fonts/lato/Lato-Reg-webfont.woff HTTP/1.1" 200 - 0 0.000 0.005
+2026-09-07 12:51:23,138 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:23] "GET /web/static/fonts/lato/Lato-Lig-webfont.woff HTTP/1.1" 200 - 0 0.000 0.006
+2026-09-07 12:51:23,139 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:23] "GET /web/static/fonts/lato/Lato-Hai-webfont.woff HTTP/1.1" 200 - 0 0.000 0.004
+2026-09-07 12:51:25,471 17541 INFO DB17 odoo.addons.base.models.ir_actions_report: The PDF report has been generated for model: property, records [124]. 
+2026-09-07 12:51:25,477 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:25] "POST /report/download HTTP/1.1" 200 - 62 0.043 4.348
+2026-09-07 12:51:25,524 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:25] "POST /mail/thread/messages HTTP/1.1" 200 - 3 0.009 0.021
+2026-09-07 12:51:25,533 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:25] "POST /web/dataset/call_kw/property/web_read HTTP/1.1" 200 - 5 0.010 0.027
+2026-09-07 12:51:25,633 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:25] "POST /mail/thread/data HTTP/1.1" 200 - 16 0.024 0.053
+2026-09-07 12:51:43,621 17541 INFO ? odoo.modules.registry: Reloading the model registry after database signaling. 
+2026-09-07 12:51:43,644 17541 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-09-07 12:51:43,670 17541 INFO ? odoo.modules.loading: 1 modules loaded in 0.03s, 0 queries (+0 extra) 
+2026-09-07 12:51:43,698 17541 INFO ? odoo.modules.loading: loading 66 modules... 
+2026-09-07 12:51:43,824 17541 WARNING ? odoo.models: The model id.cards.request has no _description 
+2026-09-07 12:51:43,824 17541 WARNING ? odoo.models: The model blood.type has no _description 
+2026-09-07 12:51:43,824 17541 WARNING ? odoo.models: The model property has no _description 
+2026-09-07 12:51:43,824 17541 WARNING ? odoo.models: The model property.line has no _description 
+2026-09-07 12:51:43,825 17541 WARNING ? odoo.models: The model owner has no _description 
+2026-09-07 12:51:43,825 17541 WARNING ? odoo.models: The model tag has no _description 
+2026-09-07 12:51:43,825 17541 WARNING ? odoo.models: The model property.history has no _description 
+2026-09-07 12:51:43,825 17541 WARNING ? odoo.models: The model property.history.line has no _description 
+2026-09-07 12:51:43,825 17541 WARNING ? odoo.models: The model change.state has no _description 
+2026-09-07 12:51:43,832 17541 INFO ? odoo.modules.loading: 66 modules loaded in 0.13s, 0 queries (+0 extra) 
+2026-09-07 12:51:44,077 17541 INFO ? odoo.modules.loading: Modules loaded. 
+2026-09-07 12:51:44,084 17541 INFO ? odoo.modules.registry: Registry loaded in 0.462s 
+2026-09-07 12:51:44,087 17541 INFO DB17 odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-09-07 12:51:44,425 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:44] "GET /web/assets/7b7b3a9/web.report_assets_pdf.min.css HTTP/1.1" 200 - 3 0.003 0.011
+2026-09-07 12:51:44,426 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:44] "GET /web/assets/04a866e/web.report_assets_common.min.css HTTP/1.1" 200 - 3 0.004 0.010
+2026-09-07 12:51:44,482 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:44] "GET /web/static/fonts/lato/Lato-Bol-webfont.woff HTTP/1.1" 200 - 0 0.000 0.001
+2026-09-07 12:51:44,504 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:44] "GET /web/static/fonts/lato/Lato-Lig-webfont.woff HTTP/1.1" 200 - 0 0.000 0.004
+2026-09-07 12:51:44,505 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:44] "GET /web/static/fonts/lato/Lato-Reg-webfont.woff HTTP/1.1" 200 - 0 0.000 0.005
+2026-09-07 12:51:44,506 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:44] "GET /web/static/fonts/lato/Lato-Bla-webfont.woff HTTP/1.1" 200 - 0 0.000 0.007
+2026-09-07 12:51:44,507 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:44] "GET /web/static/fonts/lato/Lato-Hai-webfont.woff HTTP/1.1" 200 - 0 0.000 0.006
+2026-09-07 12:51:46,793 17541 INFO DB17 odoo.addons.base.models.ir_actions_report: The PDF report has been generated for model: property, records [124]. 
+2026-09-07 12:51:46,806 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:46] "POST /report/download HTTP/1.1" 200 - 109 0.089 3.100
+2026-09-07 12:51:46,854 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:46] "POST /web/dataset/call_kw/property/web_read HTTP/1.1" 200 - 5 0.013 0.020
+2026-09-07 12:51:46,855 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:46] "POST /mail/thread/messages HTTP/1.1" 200 - 4 0.012 0.022
+2026-09-07 12:51:46,985 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:51:46] "POST /mail/thread/data HTTP/1.1" 200 - 31 0.047 0.062
+2026-09-07 12:52:02,393 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:02] "POST /web/dataset/call_kw/property/web_search_read HTTP/1.1" 200 - 2 0.005 0.015
+2026-09-07 12:52:05,658 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:05] "POST /web/dataset/call_kw/property/web_read HTTP/1.1" 200 - 5 0.007 0.020
+2026-09-07 12:52:05,831 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:05] "POST /mail/thread/data HTTP/1.1" 200 - 16 0.011 0.027
+2026-09-07 12:52:05,867 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:05] "POST /mail/thread/messages HTTP/1.1" 200 - 21 0.015 0.040
+2026-09-07 12:52:09,502 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:09] "POST /web/dataset/call_kw/property.line/onchange HTTP/1.1" 200 - 2 0.004 0.085
+2026-09-07 12:52:14,089 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:14] "POST /web/dataset/call_kw/tag/name_search HTTP/1.1" 200 - 2 0.004 0.013
+2026-09-07 12:52:14,786 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:14] "POST /web/dataset/call_kw/tag/web_read HTTP/1.1" 200 - 2 0.003 0.011
+2026-09-07 12:52:15,325 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:15] "POST /web/dataset/call_kw/tag/name_search HTTP/1.1" 200 - 2 0.004 0.014
+2026-09-07 12:52:16,786 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:16] "POST /web/dataset/call_kw/tag/name_search HTTP/1.1" 200 - 2 0.003 0.011
+2026-09-07 12:52:18,202 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:18] "POST /web/dataset/call_kw/tag/name_search HTTP/1.1" 200 - 2 0.004 0.013
+2026-09-07 12:52:18,886 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:18] "POST /web/dataset/call_kw/tag/web_read HTTP/1.1" 200 - 2 0.004 0.013
+2026-09-07 12:52:19,574 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:19] "POST /web/dataset/call_kw/tag/name_search HTTP/1.1" 200 - 2 0.003 0.011
+2026-09-07 12:52:20,749 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:20] "POST /web/dataset/call_kw/tag/web_read HTTP/1.1" 200 - 2 0.003 0.012
+2026-09-07 12:52:23,765 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:23] "POST /web/dataset/call_kw/property/web_save HTTP/1.1" 200 - 14 0.020 0.047
+2026-09-07 12:52:23,798 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:23] "POST /mail/thread/messages HTTP/1.1" 200 - 3 0.007 0.015
+2026-09-07 12:52:23,830 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:23] "POST /mail/thread/data HTTP/1.1" 200 - 16 0.010 0.028
+2026-09-07 12:52:27,577 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "POST /web/action/load HTTP/1.1" 200 - 9 0.012 0.026
+2026-09-07 12:52:27,774 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "GET /web/assets/7b7b3a9/web.report_assets_pdf.min.css HTTP/1.1" 200 - 3 0.004 0.008
+2026-09-07 12:52:27,776 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "GET /web/assets/04a866e/web.report_assets_common.min.css HTTP/1.1" 200 - 3 0.005 0.008
+2026-09-07 12:52:27,818 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "GET /web/static/fonts/lato/Lato-Bol-webfont.woff HTTP/1.1" 200 - 0 0.000 0.002
+2026-09-07 12:52:27,834 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "GET /web/static/fonts/lato/Lato-Reg-webfont.woff HTTP/1.1" 200 - 0 0.000 0.003
+2026-09-07 12:52:27,835 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "GET /web/static/fonts/lato/Lato-Bla-webfont.woff HTTP/1.1" 200 - 0 0.000 0.005
+2026-09-07 12:52:27,838 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "GET /web/static/fonts/lato/Lato-Lig-webfont.woff HTTP/1.1" 200 - 0 0.000 0.006
+2026-09-07 12:52:27,839 17541 INFO ? werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:27] "GET /web/static/fonts/lato/Lato-Hai-webfont.woff HTTP/1.1" 200 - 0 0.000 0.005
+2026-09-07 12:52:30,064 17541 INFO DB17 odoo.addons.base.models.ir_actions_report: The PDF report has been generated for model: property, records [31]. 
+2026-09-07 12:52:30,066 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:30] "POST /report/download HTTP/1.1" 200 - 26 0.030 2.446
+2026-09-07 12:52:30,083 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:30] "POST /mail/thread/messages HTTP/1.1" 200 - 3 0.004 0.007
+2026-09-07 12:52:30,087 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:30] "POST /web/dataset/call_kw/property/web_read HTTP/1.1" 200 - 6 0.004 0.011
+2026-09-07 12:52:30,123 17541 INFO DB17 werkzeug: 127.0.0.1 - - [07/Sep/2026 12:52:30] "POST /mail/thread/data HTTP/1.1" 200 - 16 0.008 0.019
