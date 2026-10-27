@@ -31,7 +31,4 @@ class Owner(models.Model):
             'res_model': 'property',
             'view_mode': 'tree,form',
             'domain': [('owner_id', '=', self.id)],
-            }
-
-
-
+        }

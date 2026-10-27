@@ -92,6 +92,13 @@ report action/template for `property` (`property_report` action, bound to the `p
 `name`, `ref`, `post_code`, `bedrooms`, `state`, `is_late`, `diff`, `garden_orientation`,
 `create_time`, `next_time`, `owner_id` (name/phone) plus its related `res.partner` records
 (`owner_id.partner_ids`), `feature_tag_ids` (own table), and `property_line_ids` (own table).
+`reports/owner_report.xml` defines the printable report action/template for `owner`
+(`owner_report` action, bound to the `owner` form via `binding_model_id`/`binding_type`, rendering
+`owner_report_template`). The template prints `name`, `address`, `phone`, `property_ids` (own
+table: name/ref/state/bedrooms/post_code), `partner_ids` (own table: name/phone/email), and a
+feature-tags table listing each property's own `feature_tag_ids` grouped per property (one row per
+property, numbered per-tag within that row's cell — owner has no `feature_tag_ids` field of its
+own). All tables are numbered using QWeb's implicit `<t-as>_index` loop variable.
 
 **Security**: `security/ir.model.access.csv` grants full CRUD to every model with no group
 restriction (`group_id` column empty) — this is a learning setup, not a production ACL model.

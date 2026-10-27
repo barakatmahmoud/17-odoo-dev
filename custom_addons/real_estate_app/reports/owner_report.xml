@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<!--    Add Report Action-->
+    <record id="owner_report" model="ir.actions.report">
+        <field name="name">Owner Report</field>
+        <field name="model">owner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="model_owner"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">real_estate_app.owner_report_template</field>
+    </record>
+
+<!--    Add Template-->
+    <template id="owner_report_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="rec">
+
+                    <style>
+                        .basic-info-table {
+                            width: 100%;
+                            border-collapse: collapse;
+                            margin-top: 15px;
+                            font-size: 14px;
+                        }
+                        .basic-info-table th {
+                            background-color: #f0f0f0;
+                            border: 1px solid #000;
+                            padding: 8px;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+                        .basic-info-table td {
+                            border: 1px solid #000;
+                            padding: 6px;
+                        }
+                        .label {
+                            font-weight: bold;
+                            background-color: #fafafa;
+                            width: 25%;
+                        }
+                    </style>
+
+                    <table class="basic-info-table">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Owner Info</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">Name</td>
+                                <td>
+                                    <t t-esc="rec.name"/>
+                                </td>
+                                <td class="label">Phone</td>
+                                <td>
+                                    <t t-esc="rec.phone"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">Address</td>
+                                <td colspan="3">
+                                    <t t-esc="rec.address"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <br/>
+
+                    <table class="basic-info-table">
+                        <thead>
+                            <tr>
+                                <th colspan="6">Properties</th>
+                            </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Reference</th>
+                                <th>State</th>
+                                <th>Bedrooms</th>
+                                <th>Post Code</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="rec.property_ids" t-as="prop">
+                                <tr>
+                                    <td>
+                                        <t t-esc="prop_index + 1"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="prop.name"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="prop.ref"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="prop.state"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="prop.bedrooms"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="prop.post_code"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <br/>
+
+                    <table class="basic-info-table">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Related Partners</th>
+                            </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="rec.partner_ids" t-as="partner">
+                                <tr>
+                                    <td>
+                                        <t t-esc="partner_index + 1"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="partner.name"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="partner.phone"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="partner.email"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <br/>
+
+<!--                    Feature Tags grouped per property (owner has no feature_tag_ids field of its own,-->
+<!--                    each property has its own feature_tag_ids, own relation table)-->
+                    <table class="basic-info-table">
+                        <thead>
+                            <tr>
+                                <th colspan="3">Feature Tags per Property</th>
+                            </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Property</th>
+                                <th>Feature Tags</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="rec.property_ids" t-as="prop">
+                                <tr>
+                                    <td>
+                                        <t t-esc="prop_index + 1"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="prop.name"/>
+                                    </td>
+                                    <td>
+                                        <t t-if="prop.feature_tag_ids">
+                                            <t t-foreach="prop.feature_tag_ids" t-as="tag">
+                                                <t t-esc="tag_index + 1"/>. <t t-esc="tag.name"/>
+                                                <t t-if="not tag_last"><br/></t>
+                                            </t>
+                                        </t>
+                                        <t t-else="">No feature tags</t>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>
