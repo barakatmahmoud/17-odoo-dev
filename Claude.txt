@@ -1,0 +1,37 @@
+### Claude prompt for investigation ###
+
+First investigate the existing code and explain the root cause.
+
+Do not modify any file yet.
+
+Identify:
+- The model involved
+- The relevant fields
+- The relevant methods
+- Where the current behavior is implemented
+- The root cause of the issue
+- The safest place to apply the fix
+
+After the investigation, propose the implementation.
+
+Then wait for my confirmation before modifying the code.
+##########################################################
+
+### Odoo Developer Task ###
+
+Act as a **Senior Odoo Developer**
+
+##########################################################
+
+Commands 
+/exit
+claude -r
+claude -c 
+/model
+/usage
+/init
+/context
+@file name
+/clear
+/rewind
+/permissions
