@@ -5,3 +5,6 @@ class Tag(models.Model):
 
     name = fields.Char(required=True)
     active = fields.Boolean(default=True)
+
+    def hello(self):
+        pass
